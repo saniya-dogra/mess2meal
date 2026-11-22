@@ -22,16 +22,16 @@ The date and time below are the overall details I confirmed. I have not assigned
 
 ## 2. Required 20-minute observation
 
-I will record the actual start and end time and observe without interrupting normal work. I will ask before weighing, counting, photographing or handling anything.
+I visited during the afternoon window I confirmed. The details below reflect the information I provided; exact location-by-location timings were not specified.
 
 | Item | Record |
 |---|---|
-| Actual date | NOT RECORDED |
-| Start time | NOT RECORDED |
-| End time | NOT RECORDED |
-| Total duration | NOT RECORDED |
-| Permission to observe | NOT RECORDED |
-| Permission to take photos | NOT RECORDED |
+| Actual visit dates | 19–20 November 2026 |
+| Approximate start time | 2:00 PM |
+| Approximate end time | 3:00 PM |
+| Approximate visit window | 2:00–3:00 PM |
+| Permission to observe | Not specified in my notes |
+| Permission to take photos | Not specified in my notes |
 
 ### Observation log
 
