@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Mess2Meal</title>
+  <desc id="desc">A colourful green, teal and golden gradient wordmark for the Mess2Meal food rescue project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062f2b"/>
+      <stop offset=".52" stop-color="#075c46"/>
+      <stop offset="1" stop-color="#123d63"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="28%" stop-color="#34d399"/>
+      <stop offset="52%" stop-color="#67e8f9"/>
+      <stop offset="76%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+      <animate attributeName="x1" values="-100%;0%;100%;-100%" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;100%;200%;0%" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="orb">
+      <stop offset="0" stop-color="#6ee7b7" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#6ee7b7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="12" y="12" width="1176" height="276" rx="38" fill="url(#bg)" stroke="#6ee7b7" stroke-opacity=".45" stroke-width="2"/>
+  <circle cx="170" cy="55" r="150" fill="url(#orb)"/>
+  <circle cx="1040" cy="260" r="180" fill="url(#orb)"/>
+  <g fill="#d1fae5" opacity=".8">
+    <circle cx="125" cy="93" r="3"><animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="1065" cy="78" r="4"><animate attributeName="opacity" values="1;.25;1" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1010" cy="220" r="3"><animate attributeName="opacity" values=".25;1;.25" dur="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="205" cy="230" r="4"><animate attributeName="opacity" values="1;.25;1" dur="4s" repeatCount="indefinite"/></circle>
+  </g>
+  <text x="600" y="153" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-3" fill="url(#letters)" filter="url(#glow)">Mess2Meal</text>
+  <path d="M420 184 Q600 205 780 184" fill="none" stroke="#a7f3d0" stroke-opacity=".75" stroke-width="3" stroke-linecap="round"/>
+  <text x="600" y="235" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" letter-spacing="2.5" fill="#ecfdf5">RESCUE SURPLUS  •  SHARE MEALS  •  REDUCE WASTE</text>
+</svg>
