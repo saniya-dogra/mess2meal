@@ -112,20 +112,18 @@ The following are **suggested paraphrase notes**, not verbatim quotations or con
 
 **Why it matters:** This suggests Mess2Meal should support coordination and transparent status tracking, while leaving food-safety decisions and final handover confirmation to responsible people.
 
-## 4. Two timestamped photographs
+## 4. Fieldwork photo evidence
 
-I will take two original photos during the visit only with permission. I will avoid faces, phone numbers, private documents and identifiable people unless I receive explicit permission. Keep original image files and their metadata; do not create timestamps in an image editor.
+I planned to document the visit with two non-identifying photographs. The original image files have not been supplied here, so the entries below are **photo descriptions to use only if they match the actual photographs**. They are not proof that photos were captured.
 
-| Photo | Repository file path (after adding) | Original capture date/time | What it shows | Permission confirmed? |
+| Photo | Suggested repository path | Visit date | Suggested caption | Evidence status |
 |---|---|---|---|---|
-| 1 | NOT RECORDED | NOT RECORDED | NOT RECORDED | NOT RECORDED |
-| 2 | NOT RECORDED | NOT RECORDED | NOT RECORDED | NOT RECORDED |
+| 1 | `assets/fieldwork-mess-area-01.jpg` | 19 November 2026 (exact capture time not available) | Wide view of the mess food preparation and serving area, showing the arrangement of food containers without identifiable people. | Original photo not supplied |
+| 2 | `assets/fieldwork-storage-area-02.jpg` | 19–20 November 2026 (exact capture time not available) | Non-identifying view of the storage or collection area used for handling remaining food / containers. | Original photo not supplied |
 
-Suggested photo subjects, only if they are relevant and permitted:
-- Photo 1: the food preparation / surplus handling area, without identifiable people.
-- Photo 2: the storage / collection point or a non-identifying view of the process.
+**Permission:** Permission to photograph has not been confirmed in the information available here. Confirm consent before publishing any original image. Remove or obscure faces, phone numbers and private documents unless the relevant people have explicitly agreed.
 
-**Do not use generated images, SVG illustrations, screenshots or stock photos as fieldwork photos.**
+**Important:** These are suggested captions and file paths only. No image has been created or passed off as an original fieldwork photograph. Add the actual image files and original metadata before marking this requirement complete. Do not use generated images, SVG illustrations, screenshots or stock photos as fieldwork evidence.
 
 ## 5. Raw data file
 
