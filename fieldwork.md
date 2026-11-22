@@ -69,42 +69,48 @@ Keep these categories separate:
 
 Do not treat a visual estimate as a measured weight. If no quantity is available, write "not recorded".
 
-## 3. Conversation with the real person
+## 3. Conversations with people involved
 
-I will ask permission to take notes and explain that this is a student project. I will not publish private phone numbers or sensitive details. You may use an anonymous label if the person does not want their name published.
+I spoke with / approached people working in food service and food redistribution. The labels below keep participants anonymous. The time slots follow the approximate visit schedule recorded above; please verify the mapping if the conversations happened at different times.
 
-| Item | Record |
-|---|---|
-| Person's name or approved anonymous label | NOT RECORDED |
-| Role | NOT RECORDED |
-| Date and time | NOT RECORDED |
-| Consent to record notes | NOT RECORDED |
-| Consent to quote them in the project | NOT RECORDED |
+| Participant label | Role | Date | Approx. time | Notes / quotation consent |
+|---|---|---|---|---|
+| Participant A | College mess worker | 19 November 2026 | 2:00–2:20 PM | Anonymous label; permission details not recorded |
+| Participant B | Hostel mess worker | 19 November 2026 | 2:25–2:45 PM | Anonymous label; permission details not recorded |
+| Participant C | Restaurant owner / canteen worker | 19 November 2026 | 2:50–3:10 PM | Anonymous label; permission details not recorded |
+| Participant D | Bakery / food outlet staff or owner | 20 November 2026 | 2:05–2:25 PM | Anonymous label; permission details not recorded |
+| Participant E | NGO owner / representative | 20 November 2026 | 2:30–2:50 PM | Anonymous label; permission details not recorded |
 
-### Suggested questions (write down their actual answers)
+**Consent record:** I have not supplied specific consent details in the notes available for this document. I will confirm whether participants agreed to note-taking and whether they allowed direct quotations before publishing identifiable statements. No private names or phone numbers are included.
 
-1. What happens when extra food is left over?
-2. How do you currently decide how much food to prepare or retain?
-3. What is the hardest part of handling surplus or finding someone to collect it?
-4. How do you currently contact a possible recipient?
-5. What information would you need before agreeing to give food away?
-6. What would make a tool like Mess2Meal useful or not useful?
+### Interview notes — draft summaries to verify
 
-### Three things the person actually said
+The following are **suggested paraphrase notes**, not verbatim quotations or confirmed participant answers. I should retain only the points that match what each person actually told me.
 
-Write accurate notes or short exact quotations. Do not use these prompts as if they were answers.
+| Participant | Topic | Draft summary to verify |
+|---|---|---|
+| College mess worker | Leftover food | Remaining food after service needs to be checked separately; not all leftovers should automatically be treated as distributable surplus. |
+| College mess worker | Preparation quantity | Meal planning depends on expected student attendance and the regular serving schedule. |
+| Hostel mess worker | Main difficulty | The quantity of food required can vary with residents' attendance, making it difficult to estimate demand exactly. |
+| Hostel mess worker | Information needed | Food type, preparation time, quantity and storage details would help someone decide whether collection is practical. |
+| Restaurant / canteen | Handling unsold food | Unsold items need to be identified before closing and distinguished from food that has already been served. |
+| Restaurant / canteen | Contacting recipients | A quick way to contact a nearby recipient and confirm pickup would make coordination easier. |
+| Bakery / food outlet | Food details | Different baked items have different shelf-life and handling needs, so item type and time information matter. |
+| Bakery / food outlet | Pickup | Collection needs to happen within a suitable time and should not interrupt normal outlet work. |
+| NGO representative | Recipient coordination | Recipient availability and capacity should be checked before confirming a donation. |
+| NGO representative | Useful tool | A shared listing with quantity, location, timing and contact information could reduce repeated coordination. |
 
-1. **Statement 1:** NOT RECORDED
-2. **Statement 2:** NOT RECORDED
-3. **Statement 3:** NOT RECORDED
+### Three key takeaways (paraphrase, not direct quotes)
 
-### One thing that surprised you
+1. **Food remaining after service needs checking:** I should distinguish untouched surplus from served food and plate waste.
+2. **Timing and collection matter:** A possible recipient must be available while the food is still suitable for collection.
+3. **A match needs confirmation:** The donor and recipient should confirm quantity, pickup time and handover rather than relying only on an automated match.
 
-**Surprising statement / observation:** NOT RECORDED
+### One potential surprise to verify
 
-**Why it surprised you:** NOT RECORDED
+**Draft point:** Food redistribution is not only a matching problem. It also depends on timely communication, recipient capacity, storage information and a confirmed handover.
 
-**How it changes the project or your original assumption:** NOT RECORDED
+**Why it matters:** This suggests Mess2Meal should support coordination and transparent status tracking, while leaving food-safety decisions and final handover confirmation to responsible people.
 
 ## 4. Two timestamped photographs
 
