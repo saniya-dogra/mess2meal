@@ -7,6 +7,8 @@ UNSAFE_TERMS = {"unsafe", "spoiled", "contaminated", "unrefrigerated"}
 def rank_recipients(food: dict, recipients: list[dict], now=None) -> list[dict]:
     """Return explainable matches. This is prioritisation, not safety certification."""
     now = now or datetime.now(timezone.utc)
+    if food.get("status", "available") != "available":
+        return []
     expiry = datetime.fromisoformat(food["best_before"])
     if expiry.tzinfo is None:
         expiry = expiry.replace(tzinfo=timezone.utc)
