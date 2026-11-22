@@ -1,8 +1,23 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:064e3b,35:059669,70:34d399,100:bfdbfe&height=190&section=header&text=Mess2Meal&fontSize=58&fontColor=ffffff&fontAlignY=42&desc=Rescue%20surplus%20%E2%80%A2%20Share%20meals%20%E2%80%A2%20Reduce%20waste&descAlignY=68&descSize=17" width="100%" alt="Mess2Meal green gradient banner"/>
+<img src="assets/mess2meal-wordmark.svg" width="100%" alt="Animated colourful Mess2Meal wordmark"/>
 
 ### A smarter way to coordinate surplus food
+
+**A Python-based food rescue and redistribution coordination prototype**
+
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=17&pause=1600&color=34D399&center=true&vCenter=true&width=650&lines=From+surplus+food+to+meaningful+connections.;List.+Match.+Coordinate.+Track.;Every+meal+deserves+a+chance." alt="Animated project tagline"/>
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![Pytest](https://img.shields.io/badge/Pytest-Testing-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://pytest.org/)
+
+</div>
+
+---
+
 
 **A Python-based food rescue and redistribution coordination prototype**
 
