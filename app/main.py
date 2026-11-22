@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import requests
 from datetime import datetime, timedelta
+from pathlib import Path
 
 API = "http://127.0.0.1:8000"
+DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "data.csv"
 
 st.set_page_config(page_title="Mess2Meal", page_icon="🍱", layout="wide")
 st.title("🍱 Mess2Meal")
@@ -17,8 +19,8 @@ except requests.RequestException:
     st.error("Backend is offline. Start it with: uvicorn app.api.main:app --reload")
     st.stop()
 
-food_tab, recipient_tab, listings_tab, impact_tab = st.tabs(
-    ["🥘 Add surplus food", "🤝 Register recipient", "📦 Listings & matches", "📊 Impact"]
+food_tab, recipient_tab, listings_tab, impact_tab, data_tab = st.tabs(
+    ["🥘 Add surplus food", "🤝 Register recipient", "📦 Listings & matches", "📊 Impact", "🗂️ Field data"]
 )
 
 with food_tab:
@@ -27,13 +29,17 @@ with food_tab:
         food_name = st.text_input("Food name", placeholder="e.g. Vegetable pulao")
         category = st.selectbox("Category", ["Vegetarian", "Vegan", "Non-vegetarian", "Bread", "Other"])
         quantity = st.number_input("Quantity (kg)", min_value=0.1, value=5.0, step=0.5)
-        prepared = st.datetime_input("Prepared at", value=datetime.now())
-        best_before = st.datetime_input("Best before", value=datetime.now() + timedelta(hours=4))
+        prepared_date = st.date_input("Prepared date", value=datetime.now().date())
+        prepared_time = st.time_input("Prepared time", value=datetime.now().time().replace(second=0, microsecond=0))
+        expiry_date = st.date_input("Best-before date", value=(datetime.now() + timedelta(hours=4)).date())
+        expiry_time = st.time_input("Best-before time", value=(datetime.now() + timedelta(hours=4)).time().replace(second=0, microsecond=0))
         storage = st.text_input("Storage condition", placeholder="e.g. Covered, kept hot")
         location = st.text_input("Pickup location")
         notes = st.text_area("Additional notes")
         submitted = st.form_submit_button("Publish food listing", type="primary")
     if submitted:
+        prepared = datetime.combine(prepared_date, prepared_time)
+        best_before = datetime.combine(expiry_date, expiry_time)
         payload = {
             "food_name": food_name, "category": category, "quantity_kg": quantity,
             "prepared_at": prepared.isoformat(), "best_before": best_before.isoformat(),
@@ -72,9 +78,7 @@ with recipient_tab:
             st.error(response.text)
 
 with listings_tab:
-    st.subheader("Available food")
-    if st.button("Refresh listings"):
-        st.rerun()
+    st.subheader("Food listings")
     listings = requests.get(f"{API}/food", timeout=5).json()
     if listings:
         st.dataframe(pd.DataFrame(listings), use_container_width=True, hide_index=True)
@@ -85,6 +89,7 @@ with listings_tab:
                 st.dataframe(pd.DataFrame(matches), use_container_width=True, hide_index=True)
             else:
                 st.info("No eligible match found. Check expiry, storage condition, category and capacity.")
+        st.caption("A coordinator must verify food safety and recipient details before any handover.")
     else:
         st.info("No food listings yet. Add the first surplus listing.")
 
@@ -95,3 +100,22 @@ with impact_tab:
     c1.metric("Delivered listings", impact["delivered_listings"])
     c2.metric("Food delivered (kg)", round(impact["delivered_kg"], 2))
     st.caption("Only listings manually marked delivered are counted.")
+
+with data_tab:
+    st.subheader("Locally collected observations")
+    st.caption("This view reads data/data.csv. Add your own observations; do not use generated rows as field evidence.")
+    if DATA_FILE.exists():
+        try:
+            observations = pd.read_csv(DATA_FILE)
+            st.metric("Recorded rows", len(observations))
+            if observations.empty:
+                st.info("No field observations recorded yet. The CSV currently contains headers only.")
+            else:
+                st.dataframe(observations, use_container_width=True, hide_index=True)
+                if "food_name" in observations.columns:
+                    st.write("Observations by food item")
+                    st.bar_chart(observations["food_name"].fillna("Not recorded").value_counts())
+        except (pd.errors.ParserError, UnicodeDecodeError) as exc:
+            st.error(f"Could not read data.csv: {exc}")
+    else:
+        st.warning("data/data.csv was not found.")
