@@ -203,6 +203,16 @@ These records are included to test CSV loading and visualisation. They are not r
 
 See [data/README.md](data/README.md) for the data dictionary and quality rules.
 
+## 🧪 Fieldwork status — primary evidence still required
+
+The five-line problem statement in [research.md](research.md) is a **provisional hypothesis**, not a claim of personal observation. The repository does not yet contain verified local fieldwork, an interview, timestamped visit photos or 20 genuine observations.
+
+- [Fieldwork workbook](fieldwork.md): visit log, 20-observation table, interview questions, three-statement record, surprising observation and photo log.
+- [Blank 20-row fieldwork CSV template](data/fieldwork-template.csv): fill only with entries collected in person.
+- The current [data/data.csv](data/data.csv) remains synthetic demo data and must not be submitted as real field evidence.
+
+Do not claim the assignment's primary-research requirements are complete until the real visit and conversation have happened and the evidence has been added with permission.
+
 ## 📚 Documentation
 
 - [Secondary research](research.md)
