@@ -1,20 +1,20 @@
 # Research report — Mess2Meal
 
 **Project:** Python-based surplus-food coordination prototype  
-**Research type:** Secondary research and product-scope analysis  
+**Research type:** Secondary research and product-scope analysis, written from my project perspective  
 **Geographic context:** India; a specific local donor/recipient network has not been verified in this repository  
-**Evidence boundary:** This report uses published institutional sources. It does not claim a local site visit, NGO interview, survey or measured local food-waste quantity.
+**My research approach:** I reviewed published institutional sources and compared existing food-recovery approaches to understand the problem and define the scope of Mess2Meal. This is desk research; I have not used it to claim a local site visit, NGO interview, survey or personally measured food-waste quantity.
 
 ## 1. Executive summary
 
 Mess2Meal is a proposed coordination tool for recording surplus food from college messes, hostel kitchens, restaurants, cafeterias and households, then helping an authorised coordinator identify potential recipient organisations.
 
-The research points to two core requirements:
+From this research, I identified two core requirements:
 
 1. Food rescue needs safe handling and a time-sensitive handover. India's Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019 place responsibilities on donors and surplus-food distribution organisations. Unsafe food must not be distributed, and surplus must be handed over in time for consumption within its usable shelf life.
 2. Food-waste measurement needs consistent data. UNEP's Food Waste Index Report 2024 stresses measurement across household, food-service and retail sectors and the need for baselines to track progress.
 
-India already has a national coordination initiative: the Indian Food Sharing Alliance (IFSA), associated with FSSAI's Save Food, Share Food, Share Joy programme. Mess2Meal should be positioned as a small local workflow prototype, not as the first or only food donation network.
+I also found that India already has a national coordination initiative: the Indian Food Sharing Alliance (IFSA), associated with FSSAI's Save Food, Share Food, Share Joy programme. Mess2Meal should be positioned as a small local workflow prototype, not as the first or only food donation network.
 
 ## 2. Problem context
 
@@ -22,11 +22,11 @@ Surplus can arise when prepared quantities exceed demand, customer demand change
 
 The practical challenge is not simply finding someone who wants food. A donation workflow also needs a donor and responsible contact, clear food description and quantity, preparation and time information, appropriate packaging/storage/transport, a recipient able to accept the quantity within the available time, and a confirmed handover record.
 
-The prototype focuses on coordination and traceability. It does not make food safe, inspect kitchens or guarantee delivery.
+I have therefore scoped my prototype around coordination and traceability. It does not make food safe, inspect kitchens or guarantee delivery.
 
 ## 2.1 Five-line local problem statement — provisional, not yet field-verified
 
-> **Important:** The following is a project hypothesis based on the software's intended use case. It is not evidence that the author personally observed this problem in the last seven days. Replace or confirm it only after a real nearby visit and conversation.
+ > **My current status:** I developed the following five lines as a hypothesis from my desk research and software scope. I have not yet verified them through a local visit or conversation, so I will revise them if primary research gives me different findings.
 
 1. A nearby food-service outlet may have prepared food left over when actual demand is lower than expected.
 2. The person responsible for the outlet may need to decide quickly what can be safely retained, used or offered for collection.
@@ -34,11 +34,11 @@ The prototype focuses on coordination and traceability. It does not make food sa
 4. Informal coordination can leave important details such as quantity, preparation time and collection status scattered across conversations.
 5. Mess2Meal proposes one simple record and recipient-shortlisting workflow, subject to validation with one real local person.
 
-**Required before submission:** Add the actual place, date, the person's role and the specific problem they described. If the person does not confirm this hypothesis, rewrite the five lines to reflect what they actually said.
+**My next step:** I need to add the actual place, date, person's role and the problem they describe after I complete a local visit. If their experience does not support this hypothesis, I will rewrite these five lines.
 
 ## 2.2 Existing solutions and comparison
 
-This comparison is based on publicly available programme information reviewed on 22 November 2026. It describes what the organisations say they do; it does not establish whether a particular chapter or collection route is currently active near the project owner's chosen site.
+I compared these approaches using publicly available programme information reviewed on 22 November 2026. This tells me how the programmes describe their work, but it does not confirm whether a particular chapter or collection route is active near my chosen site.
 
 | Existing solution | Publicly described model | Strengths | What Mess2Meal should not assume / possible gap for a small outlet |
 |---|---|---|---|
@@ -59,7 +59,7 @@ Before claiming that an existing solution does not fit the selected person, ask:
 4. What information is repeatedly missing or needs to be shared again?
 5. Would a simple listing and status record improve the process, or is the current method already sufficient?
 
-**Evidence boundary:** The comparison above is secondary research. It is not an interview result, local service audit or proof that an organisation is unavailable in Srinagar or any other locality.
+**What I can conclude:** This comparison is secondary research, not an interview or local service audit. I cannot conclude that an organisation is unavailable in Srinagar or another locality without checking directly.
 
 
 ## 3. Evidence from published sources
