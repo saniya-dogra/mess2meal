@@ -119,8 +119,7 @@ mess2meal/
 │       ├── matching.py         # Eligibility & ranking
 │       └── services.py         # Data operations
 ├── data/
-│   ├── data.csv                # Your real field observations
-│   ├── demo_data.csv           # 24 synthetic demo rows
+│   ├── data.csv                # 24 labeled synthetic demo rows; replace before submission
 │   └── README.md
 ├── docs/
 │   ├── architecture.md
@@ -193,16 +192,11 @@ pytest -v
 | PATCH | `/food/{food_id}/status` | Update donation lifecycle status |
 | GET | `/impact` | View confirmed delivery totals |
 
-## 📊 Data: real observations vs demo records
+## 📊 Dataset
 
-Two separate files are intentionally maintained:
+The single [`data/data.csv`](data/data.csv) currently contains **24 synthetic demonstration rows** spanning college messes, hostel messes, restaurants, cafes/canteens and households. Every row is marked `SYNTHETIC_DEMO_ONLY`; all locations, contacts, quantities and timestamps are illustrative.
 
-| File | Purpose | Can it count as assignment fieldwork? |
-|---|---|---|
-| [`data/data.csv`](data/data.csv) | Your own observations from the actual location | **Yes, only after you collect and document them** |
-| [`data/demo_data.csv`](data/demo_data.csv) | 24 synthetic example rows across messes, restaurants, cafes and households | **No — demo/testing only** |
-
-The demo records use clearly marked example locations and a `SYNTHETIC_DEMO_ONLY` label. They are useful for trying CSV display and charts, but must never be presented as measured local data.
+**These are software-testing examples, not observations collected at a real location. They do not satisfy the assignment's 20-real-entry requirement.** Replace these rows with your own collected observations before submission and document the method in [`fieldwork.md`](fieldwork.md). Never remove the synthetic label from invented rows to make them appear real.
 
 ## 🖼️ Screenshots & demo
 
