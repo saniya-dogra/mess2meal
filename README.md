@@ -4,7 +4,7 @@
 
 <img src="assets/mess2meal-wordmark.svg" width="100%" alt="Mess2Meal wordmark"/>
 
-**A Python prototype for coordinating surplus-food listings, recipient suggestions and handover tracking.**
+**List surplus. Match recipients. Track handovers.**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
