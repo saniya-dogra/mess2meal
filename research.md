@@ -16,6 +16,14 @@ The research points to two core requirements:
 
 India already has a national coordination initiative: the Indian Food Sharing Alliance (IFSA), associated with FSSAI's Save Food, Share Food, Share Joy programme. Mess2Meal should be positioned as a small local workflow prototype, not as the first or only food donation network.
 
+## 2. Problem context
+
+Surplus can arise when prepared quantities exceed demand, customer demand changes, or households prepare more than they consume. Community kitchens, shelters and local support organisations may need timely access to food.
+
+The practical challenge is not simply finding someone who wants food. A donation workflow also needs a donor and responsible contact, clear food description and quantity, preparation and time information, appropriate packaging/storage/transport, a recipient able to accept the quantity within the available time, and a confirmed handover record.
+
+The prototype focuses on coordination and traceability. It does not make food safe, inspect kitchens or guarantee delivery.
+
 ## 2.1 Five-line local problem statement — provisional, not yet field-verified
 
 > **Important:** The following is a project hypothesis based on the software's intended use case. It is not evidence that the author personally observed this problem in the last seven days. Replace or confirm it only after a real nearby visit and conversation.
@@ -37,13 +45,6 @@ India already has a national coordination initiative: the Indian Food Sharing Al
 
 **Local-fit conclusion:** No real person has yet been interviewed in the repository evidence. Therefore, neither mismatch above is confirmed for the user's chosen person. Record the person's answers in `fieldwork.md` and revise this comparison before submission.
 
-## 2. Problem context
-
-Surplus can arise when prepared quantities exceed demand, customer demand changes, or households prepare more than they consume. Community kitchens, shelters and local support organisations may need timely access to food.
-
-The practical challenge is not simply finding someone who wants food. A donation workflow also needs a donor and responsible contact, clear food description and quantity, preparation and time information, appropriate packaging/storage/transport, a recipient able to accept the quantity within the available time, and a confirmed handover record.
-
-The prototype focuses on coordination and traceability. It does not make food safe, inspect kitchens or guarantee delivery.
 
 ## 3. Evidence from published sources
 
@@ -102,6 +103,22 @@ The report estimates that 1.05 billion tonnes of food waste were generated globa
 - Never use synthetic CSV totals as real food-waste reduction or meals-served claims.
 
 These are global estimates, not measurements of a particular Indian college, city or neighbourhood.
+
+## 3.4 Two source-reading notes to verify before submission
+
+> These concise notes summarise the cited material for review. The assignment asks for sources the student actually read. Read the linked originals yourself and edit these notes to reflect your own understanding before claiming that requirement as complete.
+
+**Source 1 — FSSAI, Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019**
+
+- The regulations establish responsibilities for surplus-food donors and distribution organisations and prohibit distribution of unsafe food.
+- The schedule addresses handling, packing, storage, notice to recipients and hygienic transport.
+- For Mess2Meal, this means a match score must never be presented as food-safety approval; human review and timely handover remain necessary.
+
+**Source 2 — UNEP, Food Waste Index Report 2024**
+
+- The report measures food waste across household, food-service and retail sectors and highlights the need for comparable measurement.
+- Its global estimates provide context, but they do not measure food waste at the selected college, shop or neighbourhood.
+- For Mess2Meal, every local quantity needs its own date, source and measurement method, and synthetic examples must not be presented as impact.
 
 ## 4. Existing approach and project positioning
 
