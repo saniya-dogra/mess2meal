@@ -1,10 +1,10 @@
-# Mess2Meal — fieldwork record and operational validation
+# Mess2Meal — my fieldwork record and operational validation
 
-> **Evidence status: NOT YET RECORDED.** This file is a ready-to-use fieldwork workbook. It does not claim a visit, interview, photo, partnership or handover has happened. Fill it only with information you personally collect.
+ > **My evidence status: NOT YET RECORDED.** I have prepared this workbook for my field visit. I will enter only details I personally observe or that a participant gives me permission to record. I have not recorded a visit, interview, photo, partnership or handover here yet.
 
 ## 1. Before going — choose one real person and one place
 
-Choose a place within walking distance of your home or college where you have noticed a possible food-surplus problem in the last seven days. Ask permission before observing or taking photos.
+I will choose a place within walking distance of my home or college where I have noticed a possible food-surplus problem in the last seven days. I will ask permission before observing or taking photos.
 
 | Item | Record |
 |---|---|
@@ -21,7 +21,7 @@ Choose a place within walking distance of your home or college where you have no
 
 ## 2. Required 20-minute observation
 
-Record the actual start and end time. Observe the process without interrupting normal work. Ask before weighing, counting, photographing or handling anything.
+I will record the actual start and end time and observe without interrupting normal work. I will ask before weighing, counting, photographing or handling anything.
 
 | Item | Record |
 |---|---|
@@ -34,7 +34,7 @@ Record the actual start and end time. Observe the process without interrupting n
 
 ### Observation log
 
-Use one row per distinct observation or measurement. For the assignment's 20 entries, enter 20 real observations/data records in the CSV template. Do not create 20 rows by splitting or duplicating one observation.
+I will use one row per distinct observation or measurement. For the assignment's 20 entries, I need 20 genuine observations/data records in the CSV template. I will not create 20 rows by splitting or duplicating one observation.
 
 | # | Time | What you directly saw | Food / item | Quantity | Unit | How measured (weighed / counted / estimated) | Uncertainty / notes |
 |---:|---|---|---|---:|---|---|---|
@@ -69,7 +69,7 @@ Do not treat a visual estimate as a measured weight. If no quantity is available
 
 ## 3. Conversation with the real person
 
-Ask permission to take notes. Explain that this is a student project and that you will not publish private phone numbers or sensitive details. You may use an anonymous label if the person does not want their name published.
+I will ask permission to take notes and explain that this is a student project. I will not publish private phone numbers or sensitive details. You may use an anonymous label if the person does not want their name published.
 
 | Item | Record |
 |---|---|
@@ -106,7 +106,7 @@ Write accurate notes or short exact quotations. Do not use these prompts as if t
 
 ## 4. Two timestamped photographs
 
-Take two original photos during the visit, with permission. Avoid faces, phone numbers, private documents and identifiable people unless explicit permission is given. Keep original image files and their metadata; do not create timestamps in an image editor.
+I will take two original photos during the visit only with permission. I will avoid faces, phone numbers, private documents and identifiable people unless I receive explicit permission. Keep original image files and their metadata; do not create timestamps in an image editor.
 
 | Photo | Repository file path (after adding) | Original capture date/time | What it shows | Permission confirmed? |
 |---|---|---|---|---|
@@ -121,7 +121,7 @@ Suggested photo subjects, only if they are relevant and permitted:
 
 ## 5. Raw data file
 
-Use [data/fieldwork-template.csv](data/fieldwork-template.csv) for the 20 genuine entries. Keep the existing `data/data.csv` labelled as synthetic demonstration data until you have collected real observations and deliberately reviewed the new dataset.
+I will use [data/fieldwork-template.csv](data/fieldwork-template.csv) for my 20 genuine entries. Keep the existing `data/data.csv` labelled as synthetic demonstration data until you have collected real observations and deliberately reviewed the new dataset.
 
 For every entry, record:
 - date and time observed;
