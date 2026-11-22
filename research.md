@@ -1,57 +1,162 @@
-# Research notes — Mess2Meal
+# Research report — Mess2Meal
 
-> Background research has been assembled to help scope the prototype. The local problem, specific person, existing-solution fit and field observations must be completed from your own visit and conversation. Read both sources yourself before describing them as sources you personally read in your submission.
+**Project:** Python-based surplus-food coordination prototype  
+**Research type:** Secondary research and product-scope analysis  
+**Geographic context:** India; a specific local donor/recipient network has not been verified in this repository  
+**Evidence boundary:** This report uses published institutional sources. It does not claim a local site visit, NGO interview, survey or measured local food-waste quantity.
 
-## The problem in five lines — local evidence required
+## 1. Executive summary
 
-1. **Place and date observed:** [write the actual nearby mess, restaurant, cafeteria or household and visit date]
-2. **What happened:** [describe surplus food you personally saw; do not infer quantities]
-3. **Who is affected:** [name the person only with permission, and state their role]
-4. **Why the current process falls short:** [use what you observed and what the person told you]
-5. **Small tool proposed:** Mess2Meal records surplus food and helps a coordinator shortlist potential recipients.
+Mess2Meal is a proposed coordination tool for recording surplus food from college messes, hostel kitchens, restaurants, cafeterias and households, then helping an authorised coordinator identify potential recipient organisations.
 
-## Existing approaches to investigate
+The research points to two core requirements:
 
-### 1. FSSAI / IFSA — Save Food, Share Food, Share Joy
-- Official initiative: https://sharefood.eatrightindia.gov.in/
-- What it offers: an organised food-sharing initiative connecting donors, beneficiaries, volunteers and recovery agencies, alongside food-safety guidance.
-- Local fit to investigate: ask your actual mess manager whether they know this initiative, whether a local recovery organisation can collect from the location, and what makes the current process difficult. Do not claim it is unavailable without checking.
+1. Food rescue needs safe handling and a time-sensitive handover. India's Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019 place responsibilities on donors and surplus-food distribution organisations. Unsafe food must not be distributed, and surplus must be handed over in time for consumption within its usable shelf life.
+2. Food-waste measurement needs consistent data. UNEP's Food Waste Index Report 2024 stresses measurement across household, food-service and retail sectors and the need for baselines to track progress.
 
-### 2. Existing local donation or NGO collection process
-- Candidate to identify: [write the actual NGO, community kitchen, volunteer group or collection arrangement available near your selected location]
-- What it does: [verify directly from its own website or conversation]
-- Local fit to investigate: [ask your named contact about collection timing, minimum quantities, transport, contact method and food-handling requirements]
+India already has a national coordination initiative: the Indian Food Sharing Alliance (IFSA), associated with FSSAI's Save Food, Share Food, Share Joy programme. Mess2Meal should be positioned as a small local workflow prototype, not as the first or only food donation network.
 
-## Background sources to read and cite
+## 2. Problem context
 
-### Source 1 — Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019
-- Publisher: Food Safety and Standards Authority of India (FSSAI), Government of India.
-- Official regulation: https://www.fssai.gov.in/upload/uploadfiles/files/Gazette_Notification_Surplus_Food_06_08_2019.pdf
-- Notes: The regulation describes responsibilities of food donors and surplus-food distribution organisations. It says unsafe food must not be donated and food should reach recipients within its usable shelf life. It also addresses safe storage, hygienic packing and transport, labeling of donated prepared food, and record maintenance.
-- Product implication: the listing should capture source, preparation time, last-consumption/best-before information and handling condition. A software match must never replace human food-safety checks.
+Surplus can arise when prepared quantities exceed demand, customer demand changes, or households prepare more than they consume. Community kitchens, shelters and local support organisations may need timely access to food.
 
-### Source 2 — Food Waste Index Report 2024
-- Publisher: United Nations Environment Programme (UNEP), March 2024.
+The practical challenge is not simply finding someone who wants food. A donation workflow also needs a donor and responsible contact, clear food description and quantity, preparation and time information, appropriate packaging/storage/transport, a recipient able to accept the quantity within the available time, and a confirmed handover record.
+
+The prototype focuses on coordination and traceability. It does not make food safe, inspect kitchens or guarantee delivery.
+
+## 3. Evidence from published sources
+
+### 3.1 FSSAI — surplus-food recovery and distribution regulations (2019)
+
+**Source:** Food Safety and Standards Authority of India, Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019.  
+Official regulation: https://www.fssai.gov.in/upload/uploadfiles/files/Gazette_Notification_Surplus_Food_06_08_2019.pdf  
+FSSAI regulations index: https://fssai.gov.in/food-law/regulations
+
+The regulations state that a food business operator may donate surplus food to a surplus-food distribution organisation in accordance with the regulations. Donors must not distribute unsafe food. Food should be handed over with enough time for it to reach people for consumption within its shelf life.
+
+The schedule addresses segregation of perishable and non-perishable food, appropriate packing to prevent contamination, hygienic storage at suitable temperatures, keeping surplus away from waste material, advance notice to the receiving organisation, clean covered containers and hygienic transport at appropriate temperatures.
+
+**Design implications:**
+- Capture donor/source identity and a responsible contact reference.
+- Capture food category, quantity, preparation time and donor-provided use-by information where known.
+- Capture reported storage and packaging information.
+- Support time-sensitive listings and a pickup/handover status.
+- Require coordinator review; do not label an algorithmic match as food-safety approval.
+- Do not recommend unsafe, expired or unverifiable food for donation.
+
+This is a software-design interpretation, not legal advice or compliance certification.
+
+### 3.2 FSSAI — Indian Food Sharing Alliance (IFSA)
+
+**Sources:**
+- IFSA overview: https://sharefood.eatrightindia.gov.in/what_ifsa.html
+- IFSA homepage: https://sharefood.eatrightindia.gov.in/
+- Donor information: https://sharefood.eatrightindia.gov.in/donor.html
+- Beneficiary information: https://sharefood.eatrightindia.gov.in/beneficiary.html
+
+Official IFSA material describes a collaborative initiative associated with FSSAI that brings together food businesses, food-sharing organisations, recovery agencies, NGOs, volunteers, government and local bodies. Its stated aims include reducing food waste, facilitating safe distribution of surplus food and connecting trained food recovery agencies with food chains. The site provides pathways for food donors and beneficiaries.
+
+**Design implications:**
+- Complement existing food recovery networks rather than claim to replace them.
+- Represent verified organisations, not invented NGO names.
+- Record whether a recipient has confirmed acceptance.
+- A future integration could direct donors to existing recovery networks rather than create a disconnected parallel system.
+
+The existence of IFSA does not prove that a particular mess or neighbourhood has an active collection partner. Local coverage and availability need direct verification.
+
+### 3.3 UNEP — Food Waste Index Report 2024
+
+**Sources:**
 - Report page: https://wedocs.unep.org/items/dbe2cd4c-8384-4636-8359-5847f42b9711
-- Notes: The report focuses on measuring food waste across household, food-service and retail sectors. It explains why measurement methods and a baseline matter when planning and evaluating food-waste reduction. It also discusses approaches to reducing food waste, including public-private partnerships.
-- Product implication: keep source type, date/time, food category and quantity in the observation dataset so a coordinator can understand where surplus is being recorded. Do not report synthetic sample totals as impact.
+- Key messages PDF: https://wedocs.unep.org/bitstream/handle/20.500.11822/45275/Food-Waste-Index-2024-key-messages.pdf?sequence=8
 
-## Fieldwork questions to answer after the visit
+The report estimates that 1.05 billion tonnes of food waste were generated globally in 2022 at retail, food-service and household levels. Its key messages attribute 60% of this consumer-level food waste to households, 28% to food service and 12% to retail. The report highlights improved measurement, comparable methods, baselines and multi-stakeholder collaboration.
 
-- What happens to untouched surplus at closing time?
-- Who decides whether food can be shared?
-- How is quantity estimated or weighed?
-- How much time remains before the food must be consumed?
-- Who could collect it, and what transport/storage is available?
-- What would make the process useful or impractical for this person?
+**Design implications:**
+- Keep donor source category as a structured field.
+- Record observation date, food category, quantity and measurement method.
+- Distinguish measured quantities from staff estimates and visual estimates.
+- Keep missing values explicit.
+- Report only confirmed handovers as delivered impact.
+- Never use synthetic CSV totals as real food-waste reduction or meals-served claims.
 
-## Scope decision
+These are global estimates, not measurements of a particular Indian college, city or neighbourhood.
 
-The MVP focuses on a small local coordination workflow: capture a surplus listing, apply basic eligibility checks, shortlist recipients and record a handover status. It does not certify food safety, arrange real transport or guarantee delivery.
+## 4. Existing approach and project positioning
 
-## Evidence still to add
+| Existing approach | What the published source establishes | What Mess2Meal can contribute |
+|---|---|---|
+| FSSAI surplus-food regulations | Regulatory framework for safe recovery and distribution | Structured listing fields and human-review workflow |
+| Indian Food Sharing Alliance | National collaborative initiative connecting stakeholders and recovery networks | Small local coordination interface and traceable listing lifecycle |
+| UNEP Food Waste Index | Measurement framework and global food-waste evidence | Consistent records for source, date, category, quantity and method |
 
-- [ ] Your actual place, date and five-line problem statement.
-- [ ] Two solutions checked against the needs of your actual contact.
-- [ ] Your own notes after reading the two background sources above.
-- [ ] Evidence from the conversation that changed or confirmed the project scope.
+Mess2Meal is not a substitute for FSSAI, IFSA, a licensed food business, NGO operating procedures or a food-safety professional.
+
+## 5. Proposed users and needs
+
+| User group | Need | Prototype support |
+|---|---|---|
+| Mess / cafeteria operator | Record surplus quickly and share accurate details | Food listing form |
+| Restaurant / cafe | Offer suitable surplus before it becomes unusable | Time and quantity fields |
+| Household donor | Share excess prepared food through a responsible channel | Simple donor listing |
+| NGO / community kitchen | See available food and decide whether it can accept it | Recipient profile and match suggestions |
+| Volunteer / coordinator | Coordinate timing and record collection | Status tracking and handover record |
+| Project administrator | Review records and understand activity | Dashboard and impact summary |
+
+These are proposed user roles, not people interviewed for this project.
+
+## 6. Proposed end-to-end workflow
+
+1. A donor creates a surplus listing.
+2. The system validates required fields and basic eligibility information.
+3. An authorised coordinator reviews the food details and handling requirements.
+4. Matching logic filters potential recipients by availability, category and capacity.
+5. The recipient or coordinator confirms acceptance.
+6. Pickup time and responsibility are agreed by the people involved.
+7. Handover is confirmed and listing status is updated.
+8. Dashboard counts the donation as delivered only after confirmation.
+
+A match score is a prioritisation aid, not a guarantee of acceptance, safe food, pickup or delivery.
+
+## 7. Data and measurement plan
+
+The prototype CSV includes date, time, location label, source type, food name, quantity in kilograms, preparation time, best-before information, storage description, recipient/contact reference, notes and data origin.
+
+For credible future analysis:
+- Keep kilograms as the standard quantity unit.
+- Record whether a value was weighed, counted or estimated.
+- Keep untouched surplus separate from plate waste and spoiled food.
+- Record date/time consistently.
+- Use not recorded for genuinely missing values.
+- Retain provenance for synthetic versus collected records.
+- Count delivered quantity only after a confirmed handover.
+
+The current 24 CSV entries are synthetic examples, not a baseline.
+
+## 8. Risks, safeguards and limitations
+
+| Risk | Why it matters | Prototype safeguard / limitation |
+|---|---|---|
+| Unsafe or expired food | Can cause harm | Human review; software cannot certify safety |
+| Incorrect quantity or time | Can lead to failed pickups | Record measurement method and source |
+| Recipient unavailable | Food may remain undistributed | Recipient confirmation before accepted status |
+| Transport delay | Food may pass its usable time window | Record pickup timing and require human coordination |
+| Personal data exposure | Donors and recipients can be identifiable | Minimise contact data and use permission-based sharing |
+| False impact claims | Synthetic/unconfirmed records mislead | Count confirmed deliveries only; label synthetic data |
+| Uneven local network coverage | Software cannot create a nearby NGO | Verify recipient organisations before operational use |
+
+## 9. Research conclusion
+
+The reviewed sources support safe, coordinated surplus-food recovery and consistent measurement. They also show that India already has a national food-sharing initiative and a regulatory framework. Mess2Meal's defensible contribution is a lightweight Python prototype for structured listings, recipient shortlisting, status tracking and transparent records.
+
+The strongest next research step for local deployment is to verify one donor workflow and one recipient workflow in the selected area, with permission, and use those findings to revise the prototype. No local interview, visit, NGO partnership or real donation is claimed in this report.
+
+## 10. References
+
+1. FSSAI. Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019. https://www.fssai.gov.in/upload/uploadfiles/files/Gazette_Notification_Surplus_Food_06_08_2019.pdf
+2. FSSAI. Food Law — Regulations. https://fssai.gov.in/food-law/regulations
+3. FSSAI / IFSA. What is IFSA? https://sharefood.eatrightindia.gov.in/what_ifsa.html
+4. FSSAI / IFSA. Donor information. https://sharefood.eatrightindia.gov.in/donor.html
+5. FSSAI / IFSA. Beneficiary information. https://sharefood.eatrightindia.gov.in/beneficiary.html
+6. UNEP. Food Waste Index Report 2024. March 2024. https://wedocs.unep.org/items/dbe2cd4c-8384-4636-8359-5847f42b9711
+7. UNEP. Food Waste Index Report 2024 — Key Messages. https://wedocs.unep.org/bitstream/handle/20.500.11822/45275/Food-Waste-Index-2024-key-messages.pdf?sequence=8
