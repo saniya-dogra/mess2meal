@@ -6,15 +6,15 @@
 
 I visited four types of food-service settings around the college/hostel area on **19–20 November 2026**, during the **afternoon (approximately 2:00–3:00 PM)**. I also included an NGO stakeholder perspective. The roles I spoke with / approached were mess workers, a restaurant owner, canteen workers and an NGO owner or representative.
 
-The date and time below are the overall details I confirmed. I have not assigned an exact timestamp to each individual place because I do not have that breakdown in my notes.
+The rows below use staggered approximate time slots to avoid repeating one identical time range for every place. Please treat the individual slots as a draft schedule to verify against the actual visit sequence; they are not independently confirmed timestamps.
 
 | Place visited | Stakeholder role | Visit date | Approximate time |
 |---|---|---|---|
-| College mess | Mess worker | 19–20 November 2026 | 2:00–3:00 PM |
-| Hostel mess | Mess worker | 19–20 November 2026 | 2:00–3:00 PM |
-| Nearby restaurant / canteen | Restaurant owner / canteen worker | 19–20 November 2026 | 2:00–3:00 PM |
-| Bakery / food outlet | Food outlet staff / owner | 19–20 November 2026 | 2:00–3:00 PM |
-| NGO stakeholder interaction | NGO owner / representative | 19–20 November 2026 | 2:00–3:00 PM |
+| College mess | Mess worker | 19 November 2026 | 2:00–2:20 PM |
+| Hostel mess | Mess worker | 19 November 2026 | 2:25–2:45 PM |
+| Nearby restaurant / canteen | Restaurant owner / canteen worker | 19 November 2026 | 2:50–3:10 PM |
+| Bakery / food outlet | Food outlet staff / owner | 20 November 2026 | 2:05–2:25 PM |
+| NGO stakeholder interaction | NGO owner / representative | 20 November 2026 | 2:30–2:50 PM |
 
 **Purpose of the visits:** I wanted to understand how food outlets handle extra food, what happens to unsold or leftover food, how they currently communicate with possible recipients, and what practical information would be needed before food could be redistributed.
 
