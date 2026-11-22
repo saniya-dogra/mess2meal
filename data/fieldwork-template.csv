@@ -1,21 +1,21 @@
 date,time,location,source_type,food_name,quantity,unit,measurement_method,prepared_at,best_before,storage_condition,recipient_or_contact,observation_notes,data_origin
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
+"2026-11-19","14:00","College mess","College mess","Cooked rice","","kg","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: verify whether rice remained after service; record actual quantity only if measured.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:02","College mess","College mess","Dal","","litre","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: check whether dal remained in the serving vessel; do not assume it was surplus.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:04","College mess","College mess","Seasonal vegetables","","kg","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: verify food item and whether it was untouched surplus or served food.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:06","College mess","College mess","Chapati","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Mess worker","Draft example only: count only if an actual count was made.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:08","College mess","College mess","Rice and dal meal","","servings","NOT_COUNTED","","","NOT_VERIFIED","Mess worker","Draft example only: record whether any prepared servings remained after the meal period.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:25","Hostel mess","Hostel mess","Cooked rice","","kg","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: verify whether bulk food remained after resident lunch service.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:27","Hostel mess","Hostel mess","Dal","","litre","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: confirm item and storage condition with staff.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:29","Hostel mess","Hostel mess","Vegetable curry","","kg","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: distinguish untouched food from plate waste.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:31","Hostel mess","Hostel mess","Chapati","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Mess worker","Draft example only: enter a count only if directly counted.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:33","Hostel mess","Hostel mess","Curd","","litre","NOT_MEASURED","","","NOT_VERIFIED","Mess worker","Draft example only: verify whether the item was present and how it was stored.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:50","Nearby restaurant/canteen","Restaurant/canteen","Prepared meal","","servings","NOT_COUNTED","","","NOT_VERIFIED","Restaurant owner / canteen worker","Draft example only: check whether any unsold prepared meals remained.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:52","Nearby restaurant/canteen","Restaurant/canteen","Rice dish","","kg","NOT_MEASURED","","","NOT_VERIFIED","Restaurant owner / canteen worker","Draft example only: verify food name and whether it was still offered for sale.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:54","Nearby restaurant/canteen","Restaurant/canteen","Snack item","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Restaurant owner / canteen worker","Draft example only: record actual item and count only if observed.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:56","Nearby restaurant/canteen","Restaurant/canteen","Bread / bun","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Restaurant owner / canteen worker","Draft example only: verify whether unsold items were present at the time of visit.","DRAFT_NOT_FIELD_DATA"
+"2026-11-19","14:58","Nearby restaurant/canteen","Restaurant/canteen","Tea-time food item","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Restaurant owner / canteen worker","Draft example only: replace with the exact item actually seen, if any.","DRAFT_NOT_FIELD_DATA"
+"2026-11-20","14:05","Bakery / food outlet","Bakery / food outlet","Bread","","loaves","NOT_COUNTED","","","NOT_VERIFIED","Food outlet staff / owner","Draft example only: verify whether unsold bread was present; no quantity assumed.","DRAFT_NOT_FIELD_DATA"
+"2026-11-20","14:08","Bakery / food outlet","Bakery / food outlet","Buns","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Food outlet staff / owner","Draft example only: verify item and actual count before retaining this row.","DRAFT_NOT_FIELD_DATA"
+"2026-11-20","14:11","Bakery / food outlet","Bakery / food outlet","Pastries","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Food outlet staff / owner","Draft example only: note packaging and storage only if directly observed.","DRAFT_NOT_FIELD_DATA"
+"2026-11-20","14:14","Bakery / food outlet","Bakery / food outlet","Biscuits / cookies","","packs","NOT_COUNTED","","","NOT_VERIFIED","Food outlet staff / owner","Draft example only: replace with exact product if this does not match the visit.","DRAFT_NOT_FIELD_DATA"
+"2026-11-20","14:17","Bakery / food outlet","Bakery / food outlet","Cake slices","","pieces","NOT_COUNTED","","","NOT_VERIFIED","Food outlet staff / owner","Draft example only: do not infer freshness or suitability; record only verified details.","DRAFT_NOT_FIELD_DATA"
