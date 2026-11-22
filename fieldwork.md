@@ -1,6 +1,6 @@
 # Mess2Meal — my fieldwork record and operational validation
 
- > **My evidence status: NOT YET RECORDED.** I have prepared this workbook for my field visit. I will enter only details I personally observe or that a participant gives me permission to record. I have not recorded a visit, interview, photo, partnership or handover here yet.
+ > **My fieldwork status: visit details partially recorded from my confirmation.** I visited food-service settings 2–3 days before 22 November 2026 (19–20 November 2026), in the afternoon (approximately 2–3 PM). The exact date/time for each individual location, the detailed observations, interview answers and original photos still need to be entered from my own notes/files. I will not fill those gaps with invented evidence.
 
 ## 1. Before going — choose one real person and one place
 
