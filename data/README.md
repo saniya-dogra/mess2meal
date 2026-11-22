@@ -1,21 +1,16 @@
-# Data files — read before using
+# Dataset instructions
 
-This project deliberately keeps real field evidence separate from software demo records.
+The current `data.csv` contains 24 **synthetic demonstration rows**. They cover example college messes, hostel messes, restaurants, cafes/canteens and households. All rows have `data_origin=SYNTHETIC_DEMO_ONLY`.
 
-## `data.csv` — real field observations
+These records were created for testing the Python dashboard and CSV visualisation. The locations, recipient names, quantities and timestamps are illustrative, not actual observations.
 
-- This is the file for your own 20+ observations collected at the actual mess, restaurant, cafe, household or community location.
-- Record the actual date, time, location, food, quantity and storage details you observed.
-- Add the collection method and limitations in `fieldwork.md`.
-- Never invent missing measurements. Use `not recorded` when a value genuinely was not collected.
-- Obtain permission before photos or personal information are recorded.
+## Before assignment submission
 
-## `demo_data.csv` — synthetic test data
+1. Visit the actual place you selected and obtain permission to observe.
+2. Collect at least 20 real entries yourself. Record actual date/time, location, food item, quantity and preparation / best-before details where available.
+3. Replace the synthetic rows in `data.csv` with your own observations; do not just remove the `SYNTHETIC_DEMO_ONLY` label from invented rows.
+4. Use `not recorded` where a value was genuinely unavailable.
+5. Explain how you measured or estimated quantities in `fieldwork.md`.
+6. Do not publish personal phone numbers or identifiable information without permission.
 
-- Contains 24 illustrative rows across college messes, hostel messes, restaurants, cafes/canteens and household food.
-- Locations and recipient names are fictional examples.
-- Quantities and timestamps are invented to help test the dashboard and charts.
-- Every row is marked `SYNTHETIC_DEMO_ONLY`.
-- **Do not count these rows toward the assignment's 20 real entries. Do not describe them as fieldwork.**
-
-The dashboard lets you switch between the real-observation file and the demo file so the two datasets do not get mixed.
+**The synthetic examples do not count toward the assignment's real-data requirement.**
