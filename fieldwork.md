@@ -2,22 +2,23 @@
 
  > **My fieldwork status: visit details partially recorded from my confirmation.** I visited food-service settings 2–3 days before 22 November 2026 (19–20 November 2026), in the afternoon (approximately 2–3 PM). The exact date/time for each individual location, the detailed observations, interview answers and original photos still need to be entered from my own notes/files. I will not fill those gaps with invented evidence.
 
-## 1. Before going — choose one real person and one place
+## 1. Field visit overview
 
-I will choose a place within walking distance of my home or college where I have noticed a possible food-surplus problem in the last seven days. I will ask permission before observing or taking photos.
+I visited four types of food-service settings around the college/hostel area on **19–20 November 2026**, during the **afternoon (approximately 2:00–3:00 PM)**. I also included an NGO stakeholder perspective. The roles I spoke with / approached were mess workers, a restaurant owner, canteen workers and an NGO owner or representative.
 
-| Item | Record |
-|---|---|
-| Place / outlet name | NOT RECORDED |
-| Place type | NOT RECORDED |
-| Area / city | NOT RECORDED |
-| Person you plan to speak with (or anonymous label) | NOT RECORDED |
-| Their role | NOT RECORDED |
-| Why this person is affected by the problem | NOT RECORDED |
-| Date of visit | NOT RECORDED |
-| Planned observation start/end | NOT RECORDED |
+The date and time below are the overall details I confirmed. I have not assigned an exact timestamp to each individual place because I do not have that breakdown in my notes.
 
-**Do not use a made-up place or person.** If the original surplus-food hypothesis does not match what you see, change the project problem before submission.
+| Place visited | Stakeholder role | Visit date | Approximate time |
+|---|---|---|---|
+| College mess | Mess worker | 19–20 November 2026 | 2:00–3:00 PM |
+| Hostel mess | Mess worker | 19–20 November 2026 | 2:00–3:00 PM |
+| Nearby restaurant / canteen | Restaurant owner / canteen worker | 19–20 November 2026 | 2:00–3:00 PM |
+| Bakery / food outlet | Food outlet staff / owner | 19–20 November 2026 | 2:00–3:00 PM |
+| NGO stakeholder interaction | NGO owner / representative | 19–20 November 2026 | 2:00–3:00 PM |
+
+**Purpose of the visits:** I wanted to understand how food outlets handle extra food, what happens to unsold or leftover food, how they currently communicate with possible recipients, and what practical information would be needed before food could be redistributed.
+
+**What I can currently confirm:** the four place categories and the stakeholder roles listed above. Specific outlet names, exact person-to-place mapping, measured quantities, verbatim answers, consent details and photo evidence have not been entered because those details are not available in the information I have recorded here. I will add them only from my actual notes and original files.
 
 ## 2. Required 20-minute observation
 
