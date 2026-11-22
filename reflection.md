@@ -1,24 +1,41 @@
-# Mess2Meal — development reflection draft
+# Mess2Meal — engineering reflection
 
-> **This is a draft about the software-building process, based on the work recorded in this repository conversation. It is not a personal fieldwork reflection.** Before submitting, rewrite it in your own voice and add what actually happened during your visit, interview and data collection. Do not claim experiences that did not happen.
+## Project objective
 
-## What I learned while building the prototype
+Mess2Meal was developed as a Python-based prototype to make surplus-food coordination more structured. The intended users include food providers such as college messes, hostels, restaurants, cafeterias and households, along with NGOs, shelters and community kitchens that may be able to receive food.
 
-At the beginning, it was tempting to treat the problem as simply collecting leftover food and finding an NGO. While developing the project, I realised that a useful workflow needs more than a food listing. It needs information such as the food source, quantity, preparation time, best-before time, storage description and pickup location. The recipient side also needs details such as food preferences, capacity and whether it is currently accepting donations.
+The core engineering objective was to connect food listing, recipient management, matching and delivery tracking in one workflow rather than treating food donation as a simple form submission.
 
-The project scope needed to be realistic. A matching algorithm can shortlist recipients using category, capacity and urgency, but it cannot decide whether food is safe to eat. That requires appropriate human checks and safe handling. For this reason, the documentation now makes clear that a suggested match is not a confirmed donation or a food-safety certificate.
+## Key engineering decisions
 
-AI assistance was useful for structuring the Python application, drafting FastAPI and Streamlit components, preparing test cases, creating Mermaid diagrams and improving the README. It also helped generate example CSV rows for testing the dashboard. However, generated examples could easily be mistaken for real research data if they were not labeled clearly. I therefore kept the sample rows marked as synthetic and documented that they must not be counted as fieldwork.
+The application uses Streamlit for the user-facing dashboard and FastAPI for the backend API. This separation keeps the interface independent from the main business operations and makes the API available for future clients. Pydantic schemas validate incoming request data, while SQLite provides lightweight local persistence for the prototype.
 
-A key limitation of the current prototype is that it is still a local demonstration. It does not automatically contact NGOs, arrange transport, verify recipients or certify food. The next important improvement should be based on the actual workflow observed at a mess or restaurant rather than adding features based only on assumptions.
+The matching logic was kept rule-based and explainable. It filters listings by availability, best-before time and storage-description checks, then filters recipients by active status, capacity and food-category preference. Eligible recipients are ranked using urgency, coordinator-entered distance and capacity. The API returns reasons alongside the score so a coordinator can understand why a recipient appears in the shortlist.
 
-## Add your own fieldwork reflection before submission
-Write one or two paragraphs in your own words answering:
-1. What did you initially misunderstand about the surplus-food problem?
-2. What did the person you interviewed actually tell you?
-3. What did you observe that changed your assumptions?
-4. Which feature would you remove or simplify after seeing the real workflow?
-5. What did AI get wrong or assume, and how did you correct it?
-6. What would you build next based on the evidence you collected?
+A deliberate boundary is that matching is not food-safety certification. Software cannot inspect food or establish its handling history. The workflow therefore keeps human review and physical handover responsibility outside the algorithm.
 
-**Do not submit this draft unchanged as a reflection of a visit or interview.**
+## Data and evidence decisions
+
+A small CSV dataset was included to make dashboard development and demonstration repeatable. Its 24 rows are synthetic examples across several food-source categories. They are explicitly marked SYNTHETIC_DEMO_ONLY so they cannot be confused with measured food waste, actual donors or completed donations.
+
+The project documentation distinguishes secondary research from primary field evidence. Published FSSAI and UNEP material informs the workflow and data requirements, but it does not prove that a local NGO has partnered with the project or that food has been redistributed.
+
+## Current limitations
+
+The prototype is designed for local demonstration. It does not yet provide authentication, role-based access, independent recipient verification, automated notifications, GPS-based distance calculation, route planning or production deployment. The recipient distance used by the current API is a coordinator-supplied value. The dashboard and API rely on a local development setup.
+
+The current workflow can generate recipient suggestions and record a status, but it does not arrange a physical pickup. Real-world operation would require verified organisations, clear collection responsibility, safe handling procedures, privacy controls and auditable handover confirmation.
+
+## Next engineering priorities
+
+1. Add authentication and role-based permissions for donors, recipients and coordinators.
+2. Add explicit review, acceptance, pickup and handover states with an audit trail.
+3. Verify recipient organisations and periodically refresh their capacity and availability.
+4. Add notification and pickup scheduling workflows.
+5. Move from local SQLite to a production database when deployment requirements are known.
+6. Add privacy controls, secure configuration and deployment monitoring.
+7. Validate the workflow with authorised stakeholders before using it for actual food redistribution.
+
+## Closing reflection
+
+The most important design lesson from Mess2Meal is that a useful matching result is only one part of a successful donation. Reliable coordination depends on accurate information, recipient confirmation, safe handling and a verified handover. The prototype provides a foundation for that workflow while keeping its current capabilities and limitations explicit.
