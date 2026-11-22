@@ -103,11 +103,20 @@ with impact_tab:
 
 with data_tab:
     st.subheader("Locally collected observations")
-    st.caption("This view reads data/data.csv. Add your own observations; do not use generated rows as field evidence.")
-    if DATA_FILE.exists():
+    st.caption("Switch between your own field observations and clearly labeled synthetic demo records. Never report demo rows as fieldwork.")
+    demo_file = DATA_FILE.with_name("demo_data.csv")
+    dataset_choice = st.radio(
+        "Choose dataset",
+        ["My real field observations", "Synthetic demo data (not fieldwork)"],
+        horizontal=True,
+    )
+    selected_file = DATA_FILE if dataset_choice == "My real field observations" else demo_file
+    if selected_file.exists():
         try:
-            observations = pd.read_csv(DATA_FILE)
-            st.metric("Recorded rows", len(observations))
+            observations = pd.read_csv(selected_file)
+            if dataset_choice == "Synthetic demo data (not fieldwork)":
+                st.warning("DEMO DATA ONLY — fictional example locations, contacts, quantities and timestamps. These rows do not satisfy the assignment's fieldwork requirement.")
+            st.metric("Rows in selected file", len(observations))
             if observations.empty:
                 st.info("No field observations recorded yet. The CSV currently contains headers only.")
             else:
@@ -118,4 +127,4 @@ with data_tab:
         except (pd.errors.ParserError, UnicodeDecodeError) as exc:
             st.error(f"Could not read data.csv: {exc}")
     else:
-        st.warning("data/data.csv was not found.")
+        st.warning(f"{selected_file.name} was not found.")
