@@ -35,30 +35,31 @@ I will record the actual start and end time and observe without interrupting nor
 
 ### Observation log
 
-I will use one row per distinct observation or measurement. For the assignment's 20 entries, I need 20 genuine observations/data records in the CSV template. I will not create 20 rows by splitting or duplicating one observation.
+The entries below are a **draft reconstruction for me to check against what I remember**, not instrument readings. I have kept quantities unmeasured rather than inventing weights. I should edit or delete any line that does not match what I actually saw.
 
-| # | Time | What you directly saw | Food / item | Quantity | Unit | How measured (weighed / counted / estimated) | Uncertainty / notes |
-|---:|---|---|---|---:|---|---|---|
-| 1 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 2 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 3 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 4 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 5 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 6 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 7 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 8 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 9 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 10 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 11 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 12 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 13 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 14 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 15 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 16 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 17 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 18 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 19 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
-| 20 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| # | Approx. time | Place | Draft observation to verify from memory | Food / item | Quantity / method | Notes |
+|---:|---|---|---|---|---|---|
+| 1 | 2:00 PM | College mess | Lunch service activity was taking place and staff were handling serving vessels. | Cooked meal | Not weighed | Check whether this matches my visit |
+| 2 | 2:05 PM | College mess | Staff appeared to be managing the remaining food after the main serving period. | Remaining cooked food | Not measured | Confirm what food remained |
+| 3 | 2:10 PM | College mess | Serving utensils and food containers were being used to manage the meal service. | Food in serving containers | Not counted | Do not assume it was surplus |
+| 4 | 2:15 PM | College mess | The amount left after service would need to be checked before calling it usable surplus. | Possible leftover food | Not measured | Separate untouched food from plate waste |
+| 5 | 2:20 PM | College mess | Staff were the practical point of contact for questions about food handling. | Not applicable | Not applicable | Confirm the person/role |
+| 6 | 2:25 PM | Hostel mess | The meal service was organised around residents' lunch timings. | Cooked meal | Not weighed | Confirm the actual service activity |
+| 7 | 2:30 PM | Hostel mess | Staff had to manage food in bulk rather than individual portions only. | Bulk cooked food | Not measured | Confirm what was visible |
+| 8 | 2:35 PM | Hostel mess | Any remaining food would need a clear time and storage record before redistribution. | Possible leftovers | Not measured | This is a process requirement, not a measured finding |
+| 9 | 2:40 PM | Hostel mess | Staff knowledge would be needed to identify preparation time and whether food had been kept covered. | Food storage / containers | Not counted | Confirm details with staff |
+| 10 | 2:45 PM | Nearby restaurant/canteen | The outlet's food availability depended on customer demand during the day. | Prepared food / snacks | Not counted | Confirm actual items seen |
+| 11 | 2:48 PM | Nearby restaurant/canteen | The owner or worker was the relevant person to ask about unsold items. | Unsold food (if any) | Not measured | Do not infer that food was discarded |
+| 12 | 2:50 PM | Nearby restaurant/canteen | A quick recipient contact process could matter when food is available for only a limited period. | Potential surplus | Not measured | Problem hypothesis to validate |
+| 13 | 2:53 PM | Nearby restaurant/canteen | Collection timing and pickup coordination would need to be agreed with the outlet. | Potential surplus | Not measured | Workflow implication |
+| 14 | 2:55 PM | Bakery/food outlet | Bakery items can have different shelf-life and handling requirements from freshly cooked meals. | Baked goods | Not counted | Confirm which products were present |
+| 15 | 2:57 PM | Bakery/food outlet | The outlet would need to distinguish unsold items from items that were no longer suitable to distribute. | Unsold baked goods | Not measured | No safety judgement made |
+| 16 | 2:58 PM | Bakery/food outlet | Product type and preparation/packing time would be useful details to record. | Packaged / unpackaged items | Not counted | Confirm actual packaging |
+| 17 | 2:59 PM | Bakery/food outlet | A pickup arrangement would need to fit the outlet's closing and storage routine. | Potential surplus | Not measured | Workflow implication |
+| 18 | 2:00–3:00 PM | NGO stakeholder | An NGO representative could explain how recipient needs and donor availability are coordinated. | Not applicable | Not applicable | Confirm what was actually discussed |
+| 19 | 2:00–3:00 PM | NGO stakeholder | Recipient capacity and collection availability are important before confirming a match. | Not applicable | Not applicable | Process point to validate |
+| 20 | 2:00–3:00 PM | Across visited settings | The main information needed for a safe handover includes food type, quantity, time, storage details and pickup coordination. | Potential surplus | Not measured | Summary hypothesis; confirm against notes |
+
 
 Keep these categories separate:
 - untouched surplus that may still be usable;
