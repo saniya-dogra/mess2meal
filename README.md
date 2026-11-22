@@ -216,8 +216,9 @@ Do not claim the assignment's primary-research requirements are complete until t
 ## 📚 Documentation
 
 - [Secondary research](research.md)
+- [20 findings from published research](research-observations.md)
 - [Fieldwork record — owner completion required](fieldwork.md)
-- [Personal reflection — owner completion required](reflection.md)
+- [Personal reflection — first-person draft to review](reflection.md)
 - [System architecture](docs/architecture.md)
 - [Three-minute demo recording guide](docs/demo-script.md)
 - [Release and evidence checklist](docs/quality-checklist.md)
