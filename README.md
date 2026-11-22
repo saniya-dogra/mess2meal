@@ -1,266 +1,253 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:064e3b,45:10b981,100:99f6e4&height=220&section=header&text=Mess2Meal&fontSize=62&fontColor=ffffff&fontAlignY=38&desc=Rescue%20Food%20%E2%80%A2%20Share%20Meals%20%E2%80%A2%20Reduce%20Waste&descAlignY=60&descSize=18" width="100%" alt="Mess2Meal banner"/>
+# Mess2Meal
 
-<a href="https://github.com/saniya-dogra/mess2meal"><img src="https://img.shields.io/badge/PROJECT-MESS2MEAL-047857?style=for-the-badge&logo=github&logoColor=white" /></a>
-<img src="https://img.shields.io/badge/PYTHON-ONLY-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/STATUS-PROTOTYPE-F59E0B?style=for-the-badge" />
+**A Python-based surplus food coordination platform**
 
-<br/><br/>
+Connect food donors with community organisations through structured listings, explainable recipient matching and delivery tracking.
 
-**A community-first food rescue platform connecting surplus meals from college messes, restaurants, cafeterias and households with NGOs and people who need them.**
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=16&pause=1800&color=16866A&center=true&vCenter=true&width=560&lines=Rescue+surplus.+Coordinate+responsibly.;Make+every+available+meal+count." alt="Animated project tagline" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Every+meal+deserves+a+destination.;From+surplus+food+to+shared+hope.;Rescue+today.+Reduce+waste.+Feed+communities." alt="Animated project tagline"/>
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Tests](https://img.shields.io/badge/Tests-Pytest-0A9EDC?logo=pytest&logoColor=white)](https://pytest.org/)
 
 </div>
 
 ---
 
-## 🌱 The problem we're solving
+## Overview
 
-<div align="center">
+Food prepared by college messes, hostels, restaurants, cafeterias and households can remain unused while NGOs, shelters and community kitchens need timely food support. Coordinating a donation requires more than publishing an offer: quantity, preparation time, storage details, recipient capacity and pickup timing all matter.
 
-![Mess2Meal food rescue illustration](assets/food-rescue-hero.svg)
+**Mess2Meal** is a local-first prototype that brings these steps into one workflow. Donors can register surplus food, coordinators can review listings and view ranked recipient suggestions, and confirmed handovers can be reflected in delivery metrics.
 
-</div>
+The application is a coordination aid. It does not certify food safety, independently verify organisations or arrange physical transport.
 
-A college mess may prepare more food than students consume. A restaurant may have safe surplus near closing time. A household may have extra freshly prepared food. Meanwhile, local NGOs, shelters and community groups may need meals.
+## Product workflow
 
-**Mess2Meal is a Python-based coordination tool** that helps record surplus food, identify potentially suitable recipients and track the donation journey.
+![Mess2Meal donation lifecycle](assets/donation-lifecycle.svg)
 
-> **Evidence transparency:** This repository includes a clearly labeled synthetic dataset for software demonstrations. It is not fieldwork evidence. The assignment's real observations, interview, photos and reflection must be collected and written by the project author.
-
-## ✨ The journey
-
-<div align="center">
-
-| 🍲 FOOD SOURCES | ♻️ MESS2MEAL | 💚 PEOPLE |
-|:---:|:---:|:---:|
-| College messes | Validate & list | NGOs |
-| Restaurants | Match & prioritise | Shelters |
-| Cafeterias | Track handover | Community kitchens |
-| Households | Measure delivered food | People in need |
-
-</div>
-
-## 🎬 How it works
-
-![Donation lifecycle infographic](assets/donation-lifecycle.svg)
-
-```mermaid
+\`\`\`mermaid
 flowchart TD
-    A(["🍲 Surplus food available"]) --> B["Mess / restaurant / household creates listing"]
-    B --> C{"Basic safety & expiry checks"}
-    C -->|"Not eligible"| X["🚫 Exclude from recommendations"]
-    C -->|"Passes initial checks"| D["Find active NGO / recipient needs"]
-    D --> E["Python matching engine"]
-    E --> F{"Category & capacity fit?"}
-    F -->|"No"| G["Keep listing open for coordinator review"]
-    F -->|"Yes"| H["Rank suitable recipients"]
-    H --> I["Recipient confirms acceptance"]
-    I --> J["Coordinate pickup"]
-    J --> K["Human handover verification"]
-    K --> L(["✅ Mark delivered & update impact"])
-    style A fill:#064e3b,color:#fff,stroke:#10b981
-    style L fill:#047857,color:#fff,stroke:#6ee7b7
-    style X fill:#7f1d1d,color:#fff,stroke:#fca5a5
-```
+    A([Surplus food identified]) --> B[Create food listing]
+    B --> C[Validate listing details]
+    C --> D{Eligible for matching?}
+    D -->|No| E[Hold for review / exclude]
+    D -->|Yes| F[Find active recipients]
+    F --> G[Filter by category and capacity]
+    G --> H[Rank by urgency and distance]
+    H --> I[Coordinator reviews suggestions]
+    I --> J[Recipient acceptance and pickup coordination]
+    J --> K[Human-confirmed handover]
+    K --> L([Update delivery status and impact])
+\`\`\`
 
-## 🏛️ System architecture
+## Architecture
 
-![Dashboard concept illustration](assets/dashboard-concept.svg)
-
-<sub>Illustrative design concept — not a screenshot of the running application.</sub>
-
-
-```mermaid
+\`\`\`mermaid
 flowchart LR
-    S["Mess / Restaurant / Home"] --> UI["Streamlit Python Dashboard"]
-    N["NGO / Recipient"] --> UI
-    UI --> API["FastAPI REST Backend"]
-    API --> P["Pydantic Validation"]
-    API --> M["Matching & Eligibility Rules"]
-    M --> DB[("SQLite Database")]
-    UI --> CSV["Pandas CSV Viewer"]
-    CSV --> D[("data.csv")]
-    API --> IMP["Donation & Impact Tracking"]
-    IMP --> DB
-```
+    U[Donor / Coordinator] --> S[Streamlit dashboard]
+    S -->|HTTP requests| A[FastAPI backend]
+    A --> V[Pydantic validation]
+    A --> M[Matching engine]
+    A --> D[(SQLite)]
+    M --> A
+    S --> P[Pandas]
+    P --> C[data/data.csv]
+\`\`\`
 
-## 🧠 Smart matching — transparent, not a black box
+| Layer | Implementation | Responsibility |
+|---|---|---|
+| User interface | Streamlit | Food listing, recipient registration, listings, matches and impact views |
+| REST API | FastAPI | Validated endpoints for food, recipients, matching and status |
+| Validation | Pydantic | Request schemas and field constraints |
+| Business logic | Python | Eligibility checks and recipient ranking |
+| Persistence | SQLite | Food listings, recipient records and status |
+| Data analysis | Pandas | CSV loading and dashboard summaries |
+| Testing | Pytest | Automated matching and application checks |
 
-The current matching engine:
+## Core capabilities
 
-1. Excludes expired food and listings marked unavailable.
-2. Excludes blank or explicitly unsafe storage-condition descriptions.
-3. Filters out inactive recipients.
-4. Checks food-category preference and recipient capacity.
-5. Prioritises by urgency and coordinator-entered distance.
-6. Returns a score with human-readable reasons.
+### Food donation management
+- Create surplus-food listings with category, quantity, preparation time, best-before time, storage description and pickup location.
+- Retrieve current listings through the API.
+- Update a listing's donation status.
 
-**Food safety comes first:** this is only a preliminary software filter. It does not inspect, certify or guarantee that food is safe. A responsible human coordinator must verify preparation, storage, transport, recipient details and applicable food-safety requirements before every handover.
+### Recipient management
+- Register an NGO, shelter, community kitchen or other recipient group.
+- Store accepted food categories, capacity, urgency and active status.
+- Retrieve recipient records for coordinator review.
 
-## 🧰 Tech stack
+### Explainable matching
+The matching module applies these rules:
 
-<div align="center">
+1. The listing must be available and its best-before time must be in the future.
+2. A blank storage description or one containing configured unsafe terms is excluded.
+3. Only active recipients are considered.
+4. Recipient capacity must meet the listed quantity.
+5. Food category must match recipient preferences, unless the recipient accepts all categories.
+6. Eligible recipients are ranked using urgency, coordinator-entered distance and capacity.
+7. Each result includes a score and human-readable reasons.
 
-<img src="https://skillicons.dev/icons?i=python,fastapi,sqlite,git,github&theme=light" alt="Technology icons"/>
+**Important:** These checks are preliminary software filters, not food-safety inspection or certification. A responsible person must verify food condition, handling, recipient suitability and applicable requirements before redistribution.
 
-</div>
+## Technology stack
 
-| Technology | Role |
-|---|---|
-| Python 3.10+ | Entire application and business logic |
-| FastAPI | REST backend |
-| Streamlit | Interactive dashboard |
-| SQLite | Local persistence |
-| Pydantic | Request validation |
-| Pandas | CSV loading and analysis |
-| Pytest | Unit tests |
-| Mermaid | Architecture and workflow diagrams |
+- **Language:** Python
+- **Backend:** FastAPI, Uvicorn, Pydantic
+- **Frontend:** Streamlit
+- **Database:** SQLite
+- **Data handling:** Pandas
+- **HTTP client:** Requests
+- **Testing:** Pytest, HTTPX
+- **Documentation:** Markdown and Mermaid
 
-## 🗂️ Repository structure
+## Repository structure
 
-```text
+\`\`\`text
 mess2meal/
 ├── app/
-│   ├── main.py                 # Streamlit dashboard
+│   ├── main.py
 │   └── api/
-│       ├── main.py             # FastAPI routes
-│       ├── schemas.py          # Pydantic models
-│       ├── database.py         # SQLite setup
-│       ├── matching.py         # Eligibility & ranking
-│       └── services.py         # Data operations
+│       ├── main.py
+│       ├── database.py
+│       ├── matching.py
+│       ├── schemas.py
+│       └── services.py
+├── assets/
+│   ├── food-rescue-hero.svg
+│   ├── donation-lifecycle.svg
+│   ├── dashboard-concept.svg
+│   └── README.md
 ├── data/
-│   ├── data.csv                # 24 labeled synthetic demo rows; replace before submission
+│   ├── data.csv
 │   └── README.md
 ├── docs/
 │   ├── architecture.md
 │   └── flowcharts/
-│       └── donation-lifecycle.mmd
-├── assets/\n│   ├── food-rescue-hero.svg\n│   ├── donation-lifecycle.svg\n│   ├── dashboard-concept.svg\n│   └── README.md
 ├── tests/
 │   └── test_matching.py
-├── ai-chats/\n│   ├── project-development-log.md\n│   └── README.md
+├── ai-chats/
 ├── research.md
 ├── fieldwork.md
 ├── reflection.md
 ├── requirements.txt
 └── README.md
-```
+\`\`\`
 
-## 🚀 Run it locally
+## Getting started
 
 ### 1. Clone the repository
 
-```bash
+\`\`\`bash
 git clone https://github.com/saniya-dogra/mess2meal.git
 cd mess2meal
-```
+\`\`\`
 
-### 2. Create an environment and install dependencies
+### 2. Create a virtual environment
 
-```bash
+**Windows PowerShell**
+\`\`\`powershell
 python -m venv .venv
+.venv\\Scripts\\Activate.ps1
+\`\`\`
 
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-
-# macOS / Linux
+**macOS / Linux**
+\`\`\`bash
+python3 -m venv .venv
 source .venv/bin/activate
+\`\`\`
 
+### 3. Install dependencies
+
+\`\`\`bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
+\`\`\`
 
-### 3. Start the backend
+### 4. Start the API
 
-```bash
+\`\`\`bash
 uvicorn app.api.main:app --reload
-```
+\`\`\`
 
-Open **http://127.0.0.1:8000/docs** for interactive Swagger API documentation.
+API base URL: http://127.0.0.1:8000  
+Interactive API documentation: http://127.0.0.1:8000/docs
 
-### 4. Start the dashboard (new terminal)
+### 5. Start the dashboard
 
-```bash
+Open a second terminal with the virtual environment activated:
+
+\`\`\`bash
 streamlit run app/main.py
-```
+\`\`\`
 
-### 5. Run tests
+### 6. Run tests
 
-```bash
+\`\`\`bash
 pytest -v
-```
+\`\`\`
 
-## 🔌 API endpoints
+## API reference
 
-| Method | Endpoint | Description |
-|:---:|---|---|
-| GET | `/health` | Backend health check |
-| POST | `/food` | Create surplus food listing |
-| GET | `/food` | View food listings |
-| POST | `/recipients` | Register NGO / recipient |
-| GET | `/recipients` | View recipients |
-| GET | `/food/{food_id}/matches` | Get ranked recipient suggestions |
-| PATCH | `/food/{food_id}/status` | Update donation lifecycle status |
-| GET | `/impact` | View confirmed delivery totals |
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | /health | API health check |
+| POST | /food | Create a food listing |
+| GET | /food | List food records |
+| POST | /recipients | Register a recipient |
+| GET | /recipients | List recipients |
+| GET | /food/{food_id}/matches | Retrieve ranked recipient suggestions |
+| PATCH | /food/{food_id}/status | Update donation status |
+| GET | /impact | Retrieve delivered-only impact totals |
 
-## 📊 Dataset
+## Sample dataset
 
-The single [`data/data.csv`](data/data.csv) currently contains **24 synthetic demonstration rows** spanning college messes, hostel messes, restaurants, cafes/canteens and households. Every row is marked `SYNTHETIC_DEMO_ONLY`; all locations, contacts, quantities and timestamps are illustrative.
+[data/data.csv](data/data.csv) contains 24 **synthetic demonstration records** covering college messes, hostel messes, restaurants, cafes/bakeries, canteens and households. Every row is marked SYNTHETIC_DEMO_ONLY.
 
-**These are software-testing examples, not observations collected at a real location. They do not satisfy the assignment's 20-real-entry requirement.** Replace these rows with your own collected observations before submission and document the method in [`fieldwork.md`](fieldwork.md). Never remove the synthetic label from invented rows to make them appear real.
+The sample data demonstrates CSV loading and dashboard visualisations. It is not a record of actual food waste, real donors, NGO partnerships or completed donations. Do not use its quantities as real-world impact figures.
 
-## 🖼️ Screenshots & demo
+See [data/README.md](data/README.md) for the data dictionary, provenance rules and usage notes.
 
-Add screenshots of your own running application to `assets/`:
+## Project documentation
 
-| Suggested screenshot | What to capture |
-|---|---|
-| `dashboard-overview.png` | Main dashboard and navigation |
-| `food-listing.png` | A test food listing |
-| `matching-results.png` | Ranked recipient suggestions |
-| `impact-dashboard.png` | Delivered-only impact metrics |
+- [Architecture](docs/architecture.md) — application components and data flow.
+- [Research](research.md) — secondary research, food recovery context and design implications.
+- [Operational workflow](fieldwork.md) — use-case analysis, operational requirements and validation boundaries.
+- [Development reflection](reflection.md) — engineering decisions, trade-offs and lessons from building the prototype.
+- [AI-assisted development log](ai-chats/project-development-log.md) — summary of AI-assisted project work.
+- [Visual assets](assets/README.md) — diagrams and illustrative graphics.
 
-Add two timestamped photos from your real field visit only with permission. Do not use generated or stock images as proof of fieldwork.
+## Security, safety and limitations
 
-**3-minute demo recording:** _Add your own recording link here after recording the working application._
+- The prototype is intended for local demonstration and evaluation, not production deployment.
+- Authentication and role-based access control are not currently implemented.
+- Recipient records are not independently verified.
+- Distance is coordinator-entered; there is no GPS or route optimisation.
+- No SMS, WhatsApp or automated NGO notification integration is implemented.
+- SQLite is suitable for this local prototype, not a multi-tenant production deployment.
+- Matching is not a food-safety decision. Human checks and applicable food-handling requirements remain essential.
+- Contact information should be handled carefully and must not be exposed in public screenshots or sample datasets.
 
-## 🧪 Assignment evidence
+## Future improvements
 
-- [Research notes](research.md) — complete with two sources you actually read.
-- [Fieldwork record](fieldwork.md) — real visit, named/agreed contact, timestamped conversation and photos.
-- [Data collection guide](data/README.md) — collect 20+ genuine observations.
-- [Personal reflection](reflection.md) — write this yourself without AI.
-- [AI-assisted development log](ai-chats/project-development-log.md) — summary of the work recorded in this conversation. Export and add raw chats separately if required.
-
-## ⚠️ Current limitations
-
-- No GPS or automatic route optimisation; distance is coordinator-entered.
-- No SMS, WhatsApp or live NGO notification integration.
-- No automatic food-safety certification.
-- SQLite is intended for a local prototype, not concurrent multi-location production.
-- A suggested match does not mean the recipient accepted or food was delivered.
-- Synthetic demo records do not establish real-world impact.
-
-## 🔮 Future roadmap
-
-- [ ] Role-based access for mess operators, NGO coordinators and administrators.
-- [ ] Recipient verification and handover confirmation.
-- [ ] Pickup windows and volunteer coordination.
-- [ ] Multi-location database deployment.
-- [ ] Privacy-aware impact reports and food rescue analytics.
+- [ ] Role-based authentication for donors, recipients and coordinators.
+- [ ] Recipient verification and consent-based onboarding.
+- [ ] Pickup scheduling and volunteer coordination.
+- [ ] Notification integration for accepted matches.
+- [ ] Audit history for listing and handover status changes.
+- [ ] Production database and deployment configuration.
+- [ ] Privacy-aware reporting based only on verified deliveries.
 
 ---
 
 <div align="center">
 
-### 💚 One listing can become someone's meal.
+**Mess2Meal** · Rescue surplus. Coordinate responsibly. Reduce avoidable food waste.
 
-**Mess2Meal — Don't waste it. Share it.**
-
-<a href="https://github.com/saniya-dogra/mess2meal"><img src="https://img.shields.io/badge/Explore%20the%20Repository-047857?style=for-the-badge&logo=github&logoColor=white" /></a>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:99f6e4,55:10b981,100:064e3b&height=110&section=footer" width="100%" alt="Green footer"/>
+<sub>Built with Python.</sub>
 
 </div>
