@@ -1,49 +1,53 @@
-# AI-assisted project conversation log — Mess2Meal
+# Mess2Meal — development session summary
 
-This file records the main AI-assisted tasks visible in the project-building conversation. It is a retrospective summary, not a verbatim chat transcript. The original conversation should be exported separately if the course requires raw exports.
+This is a companion summary to the AI conversation notes in README.md. It groups the main development discussions by outcome and records the decisions that shaped the prototype. It is not a verbatim transcript.
 
-## 1. Define the product
+## Session 1 — Turning the idea into an application
 
-**Prompt summary:** Build a Python-only Mess2Meal application that helps surplus food from messes, restaurants and households reach NGOs and people in need. Follow the supplied project document and build the backend and repository structure.
+**Discussion:** How can surplus food from messes, hostels, restaurants and households be listed and connected with possible recipients?
 
-**Outcome:** Established a food listing and recipient workflow, FastAPI backend, Streamlit dashboard, SQLite data layer, matching logic, project documentation and tests.
+**Approach considered:** A dashboard, backend API, persistent records and a matching workflow.
 
-**Review note:** The actual assignment document is not reproduced in this log. The student should compare the final repository with the original document and confirm every rubric item.
+**Project direction:** FastAPI for API routes, Streamlit for the dashboard, SQLite for local persistence and Pydantic for request validation.
 
-## 2. Improve the README and add demo data
+## Session 2 — Recipient suggestions
 
-**Prompt summary:** Make the README more attractive with color, animation, flowcharts and technology details. Add sample food data for messes, restaurants and household food.
+**Discussion:** What makes a recipient suitable for a particular food listing, and how can the result be explained?
 
-**Outcome:** Added animated README header/footer and typing tagline, Mermaid lifecycle and architecture diagrams, technology badges, setup instructions, API table, roadmap and 24 synthetic example rows.
+**Approach considered:** Filter by listing availability, best-before time, storage description, recipient activity, category preference and capacity. Rank eligible results using urgency and coordinator-entered distance.
 
-**Review note:** Sample values are generated solely to test the software. They must not be reported as real food waste or fieldwork.
+**Project direction:** A rule-based matching function that returns scores and reasons. Human review remains necessary; the score is not a food-safety judgement.
 
-## 3. Consolidate the dataset
+## Session 3 — Dashboard test data
 
-**Prompt summary:** Move demo records into data.csv and remove the separate demo file.
+**Discussion:** How can the dashboard and charts be demonstrated across several types of food sources?
 
-**Outcome:** Merged the 24 sample rows into data/data.csv, deleted data/demo_data.csv and updated the dashboard to read the single CSV and display source-wise and food-wise charts.
+**Approach considered:** A single CSV with consistent fields and sample categories.
 
-**Review note:** Each generated record retains the SYNTHETIC_DEMO_ONLY marker.
+**Project direction:** 24 synthetic demonstration records in data/data.csv, covering college messes, hostel messes, restaurants, cafes/canteens and households. Each row is marked SYNTHETIC_DEMO_ONLY.
 
-## 4. Complete project assets and evidence documentation
+## Session 4 — Documentation and visual explanation
 
-**Prompt summary:** Populate assets and ai-chats, and complete fieldwork and reflection files.
+**Discussion:** What should a reviewer see first, and how can the architecture and donation process be made clear?
 
-**Outcome:** Created original SVG graphics for the food rescue concept, donation lifecycle and a dashboard concept. Expanded the fieldwork file into a structured visit/interview/observation template. Added a development reflection draft and this AI-assisted work log.
+**Approach considered:** A README with setup steps, API details, feature summary, Mermaid diagrams and supporting SVG illustrations.
 
-**Review note:** The illustrations are not photos of a real visit. The fieldwork template is not an interview record. The reflection draft describes software development only and must be supplemented by the student's actual experience.
+**Project direction:** A structured README and project-specific visual assets.
 
-## 5. What the student should verify
+## Session 5 — Operational boundaries
 
-- [ ] Compare the code and deliverables with the original assignment document.
-- [ ] Run the FastAPI backend and Streamlit dashboard locally.
-- [ ] Run the test suite and fix any failures.
-- [ ] Review generated code and understand the matching logic.
-- [ ] Export the original AI conversation if required.
-- [ ] Conduct and document genuine fieldwork.
-- [ ] Replace synthetic sample rows with real observations before claiming field results.
+**Discussion:** How should the documentation describe the intended real-world process without inventing fieldwork?
 
-## AI use statement
+**Approach considered:** Document user roles, each handover stage, required information, risks and validation status. Keep primary field evidence separate from desk research and software design.
 
-AI was used for coding assistance, documentation structure, example test data and visual assets. The student remains responsible for validating the software, collecting real-world evidence, checking food-safety requirements and explaining the work during evaluation.
+**Project direction:** An operational workflow document that explicitly identifies features and activities that are not yet verified or implemented.
+
+## Verification checklist
+
+- [ ] Run the API and dashboard locally.
+- [ ] Run the test suite and review its output.
+- [ ] Compare the repository against the original project brief.
+- [ ] Verify each documented endpoint against the running API.
+- [ ] Keep synthetic data provenance labels intact.
+- [ ] Add genuine screenshots only after running the application.
+- [ ] Add actual field evidence only if it has been collected with appropriate permission.
