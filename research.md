@@ -16,6 +16,27 @@ The research points to two core requirements:
 
 India already has a national coordination initiative: the Indian Food Sharing Alliance (IFSA), associated with FSSAI's Save Food, Share Food, Share Joy programme. Mess2Meal should be positioned as a small local workflow prototype, not as the first or only food donation network.
 
+## 2.1 Five-line local problem statement — provisional, not yet field-verified
+
+> **Important:** The following is a project hypothesis based on the software's intended use case. It is not evidence that the author personally observed this problem in the last seven days. Replace or confirm it only after a real nearby visit and conversation.
+
+1. A nearby food-service outlet may have prepared food left over when actual demand is lower than expected.
+2. The person responsible for the outlet may need to decide quickly what can be safely retained, used or offered for collection.
+3. Finding a suitable recipient in time may require checking availability, accepted food categories and capacity.
+4. Informal coordination can leave important details such as quantity, preparation time and collection status scattered across conversations.
+5. Mess2Meal proposes one simple record and recipient-shortlisting workflow, subject to validation with one real local person.
+
+**Required before submission:** Add the actual place, date, the person's role and the specific problem they described. If the person does not confirm this hypothesis, rewrite the five lines to reflect what they actually said.
+
+## 2.2 Two existing approaches and their local fit — validation pending
+
+| Existing approach | What it offers | Potential mismatch for the proposed small local workflow | What must be checked with the real person |
+|---|---|---|---|
+| Indian Food Sharing Alliance (IFSA) | A wider food-sharing initiative connecting donors, beneficiaries and recovery stakeholders; see the official IFSA sources in Section 3.2. | A national initiative may not by itself tell us whether a particular nearby outlet has an active, reachable collection partner at the exact time surplus is available. This is a local-coverage question, not a claim that IFSA is ineffective. | Has the person heard of IFSA? Have they used it or contacted a recovery organisation? Was a suitable local partner available? |
+| Direct phone calls / messaging between a donor and a known contact | A lightweight way to notify someone without learning a new application. | Details can remain in separate messages, and the donor may need to repeat quantity, timing, handling and collection updates. Whether this causes difficulty at the selected site is not yet known. | Does the person currently use calls or WhatsApp? Which details are difficult to track? Would a structured listing actually save time? |
+
+**Local-fit conclusion:** No real person has yet been interviewed in the repository evidence. Therefore, neither mismatch above is confirmed for the user's chosen person. Record the person's answers in `fieldwork.md` and revise this comparison before submission.
+
 ## 2. Problem context
 
 Surplus can arise when prepared quantities exceed demand, customer demand changes, or households prepare more than they consume. Community kitchens, shelters and local support organisations may need timely access to food.
