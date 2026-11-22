@@ -43,28 +43,45 @@ def test_expired_food_is_never_matched():
 
 
 def test_unsafe_storage_is_never_matched():
-    assert rank_recipients(
-        sample_food(storage_condition="spoiled food"),
-        [sample_recipient()],
-    ) == []
+    assert rank_recipients(sample_food(storage_condition="spoiled food"), [sample_recipient()]) == []
+
+
+def test_missing_storage_is_never_matched():
+    assert rank_recipients(sample_food(storage_condition=""), [sample_recipient()]) == []
 
 
 def test_recipient_with_insufficient_capacity_is_excluded():
-    assert rank_recipients(
-        sample_food(quantity_kg=20),
-        [sample_recipient(capacity_kg=5)],
-    ) == []
+    assert rank_recipients(sample_food(quantity_kg=20), [sample_recipient(capacity_kg=5)]) == []
 
 
 def test_inactive_recipient_is_excluded():
-    assert rank_recipients(
-        sample_food(),
-        [sample_recipient(is_active=False)],
-    ) == []
+    assert rank_recipients(sample_food(), [sample_recipient(is_active=False)]) == []
 
 
 def test_category_mismatch_is_excluded():
-    assert rank_recipients(
-        sample_food(category="vegetarian"),
-        [sample_recipient(preferred_categories=["bread"])],
-    ) == []
+    assert rank_recipients(sample_food(), [sample_recipient(preferred_categories=["bread"])]) == []
+
+
+def test_all_category_is_accepted():
+    matches = rank_recipients(sample_food(), [sample_recipient(preferred_categories=["All"])])
+    assert len(matches) == 1
+
+
+def test_non_available_listing_is_excluded():
+    assert rank_recipients(sample_food(status="delivered"), [sample_recipient()]) == []
+
+
+def test_nearer_recipient_ranks_higher_when_other_inputs_match():
+    near = sample_recipient(id=1, name="Near", distance_km=1)
+    far = sample_recipient(id=2, name="Far", distance_km=8)
+    matches = rank_recipients(sample_food(), [far, near])
+    assert matches[0]["recipient_name"] == "Near"
+
+
+def test_missing_expiry_is_excluded():
+    assert rank_recipients(sample_food(best_before=None), [sample_recipient()]) == []
+
+
+def test_timezone_naive_expiry_is_handled_as_utc():
+    future = (datetime.now(timezone.utc) + timedelta(hours=1)).replace(tzinfo=None).isoformat()
+    assert len(rank_recipients(sample_food(best_before=future), [sample_recipient()])) == 1
