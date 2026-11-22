@@ -1,14 +1,14 @@
-# 20 research-based findings — Mess2Meal
+# 20 research findings I reviewed for Mess2Meal
 
 > **Evidence type: SECONDARY RESEARCH, NOT FIELD OBSERVATIONS.**
 >
-> These 20 entries are findings extracted or carefully summarised from published reports and Government of India replies. They are useful research evidence for the assignment's background section, but they do **not** count as 20 observations made by the student during a local visit. They contain no invented visit dates, locations, people, quantities measured by the student or interview quotes.
+> I collected and summarised these 20 findings from published reports and Government of India replies to understand the scale of food waste and the requirements for responsible food recovery. They support my background research, but they do **not** count as 20 observations I personally made during a local visit. I have not added invented visit dates, locations, people, measured quantities or interview quotes.
 
 **Research review date:** 22 November 2026  
 **Geographic scope:** India and global context  
 **Primary sources:** UNEP Food Waste Index Report 2024; Government of India parliamentary replies; MoFPI/NABCONS and ICAR-CIPHET estimates; FAO and UNEP food loss and waste resources.
 
-## Twenty findings from published research
+## What I learned from the published research
 
 | # | Research finding | Scope / what it means for Mess2Meal | Source |
 |---:|---|---|---|
@@ -33,15 +33,15 @@
 | 19 | A 2025 Rajya Sabha reply reports NABCONS 2022 post-harvest loss ranges of **3.89–5.92% for cereals** and **5.65–6.74% for pulses**. | These are agricultural post-harvest estimates, not cooked-food surplus measurements; keep them separate in the report. | [Government of India, Rajya Sabha reply, 29 Jul 2025](https://www.sansad.in/getFile/annex/268/AS93_kW1Yhn.pdf?source=pqars) |
 | 20 | The same reply reports NABCONS 2022 post-harvest loss ranges of **6.02–15.05% for fruits** and **4.87–11.61% for vegetables**. | Shows that loss varies by commodity; it should not be converted into an assumed quantity of edible surplus at a local outlet. | [Government of India, Rajya Sabha reply, 29 Jul 2025](https://www.sansad.in/getFile/annex/268/AS93_kW1Yhn.pdf?source=pqars) |
 
-## How to use these findings
+## How I used these findings in my project
 
-1. Cite them in the **secondary research / background** section of the report.
-2. Use them to justify why the prototype records food type, quantity, time, handling notes and handover status.
-3. Keep national household estimates, agricultural post-harvest loss and food-service waste as separate categories.
-4. Do not put these rows into `data/fieldwork-template.csv` or label them `FIELD_OBSERVED`.
-5. The assignment's 20 primary observations still require a real local visit. Record actual items, dates, times, quantities and measurement methods in the fieldwork CSV.
+1. I use them in the **secondary research / background** section of my report.
+2. I use them to explain why my prototype records food type, quantity, time, handling notes and handover status.
+3. I keep national household estimates, agricultural post-harvest loss and food-service waste as separate categories.
+4. I do not put these findings into `data/fieldwork-template.csv` or label them `FIELD_OBSERVED`.
+5. I still need a real local visit for the assignment's 20 primary observations. I will record actual items, dates, times, quantities and measurement methods in the fieldwork CSV.
 
-## Limitations
+## Limitations I noted
 
 - These are published findings at national or global scale, not observations made at the student's chosen site.
 - The sources use different years, sectors and methodologies; their numbers are not directly interchangeable.
