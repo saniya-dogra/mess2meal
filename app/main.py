@@ -102,29 +102,41 @@ with impact_tab:
     st.caption("Only listings manually marked delivered are counted.")
 
 with data_tab:
-    st.subheader("Locally collected observations")
-    st.caption("Switch between your own field observations and clearly labeled synthetic demo records. Never report demo rows as fieldwork.")
-    demo_file = DATA_FILE.with_name("demo_data.csv")
-    dataset_choice = st.radio(
-        "Choose dataset",
-        ["My real field observations", "Synthetic demo data (not fieldwork)"],
-        horizontal=True,
-    )
-    selected_file = DATA_FILE if dataset_choice == "My real field observations" else demo_file
-    if selected_file.exists():
+    st.subheader("Food surplus dataset")
+    st.caption("The CSV is loaded from data/data.csv. Check the data_origin column before interpreting any row.")
+    if DATA_FILE.exists():
         try:
-            observations = pd.read_csv(selected_file)
-            if dataset_choice == "Synthetic demo data (not fieldwork)":
-                st.warning("DEMO DATA ONLY — fictional example locations, contacts, quantities and timestamps. These rows do not satisfy the assignment's fieldwork requirement.")
-            st.metric("Rows in selected file", len(observations))
+            observations = pd.read_csv(DATA_FILE)
+            st.metric("Rows in CSV", len(observations))
             if observations.empty:
-                st.info("No field observations recorded yet. The CSV currently contains headers only.")
+                st.info("The CSV has headers only. Add observations to begin.")
             else:
+                if "data_origin" in observations.columns:
+                    synthetic_count = int((observations["data_origin"] == "SYNTHETIC_DEMO_ONLY").sum())
+                    if synthetic_count:
+                        st.warning(
+                            f"{synthetic_count} rows are synthetic demonstration data. "
+                            "They are fictional examples and do NOT count as fieldwork or real food rescued."
+                        )
+                    real_count = len(observations) - synthetic_count
+                    st.metric("Rows not labeled synthetic", real_count)
                 st.dataframe(observations, use_container_width=True, hide_index=True)
-                if "food_name" in observations.columns:
-                    st.write("Observations by food item")
-                    st.bar_chart(observations["food_name"].fillna("Not recorded").value_counts())
-        except (pd.errors.ParserError, UnicodeDecodeError) as exc:
+
+                if "source_type" in observations.columns:
+                    st.subheader("Records by food source")
+                    st.bar_chart(observations["source_type"].fillna("Not recorded").value_counts())
+
+                if "food_name" in observations.columns and "quantity_kg" in observations.columns:
+                    chart_data = observations.copy()
+                    chart_data["quantity_kg"] = pd.to_numeric(chart_data["quantity_kg"], errors="coerce")
+                    st.subheader("Illustrative quantity by food item")
+                    st.bar_chart(chart_data.groupby("food_name")["quantity_kg"].sum().sort_values(ascending=False))
+
+                st.caption(
+                    "Charts describe the rows currently in this CSV. Synthetic entries are for software testing only; "
+                    "do not report their quantities as actual food waste or meals delivered."
+                )
+        except (pd.errors.ParserError, UnicodeDecodeError, ValueError) as exc:
             st.error(f"Could not read data.csv: {exc}")
     else:
-        st.warning(f"{selected_file.name} was not found.")
+        st.warning("data/data.csv was not found.")
