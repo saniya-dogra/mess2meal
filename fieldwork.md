@@ -1,116 +1,122 @@
-# Mess2Meal — field research and operational case study
+# Mess2Meal — operational workflow and validation
 
-**Document status:** Desk research and workflow case study completed; primary field evidence is not available in this repository.  
-**Purpose:** Document the research method, operational scenario, requirements and evidence boundaries without presenting an unverified visit or interview as fact.
+## Document purpose
 
-## 1. Research method
+This document describes the operational use case the Mess2Meal prototype is designed to support, the workflow assumptions used in development, and the checks required before the system could be used in a real food redistribution programme.
 
-This document combines secondary research from FSSAI's surplus-food regulations and Indian Food Sharing Alliance (IFSA) material, UNEP's Food Waste Index Report 2024, and a hypothetical end-to-end workflow used to test product requirements.
+It is a product and operational design document. It is not a claim that a site visit, interview, NGO partnership or food handover has taken place.
 
-It does not record a physical site visit, a real interview, an NGO partnership, measured local quantities or a completed food handover. No date, person, quote, photo or location has been invented.
+## 1. Problem statement
 
-## 2. Operational case study — illustrative scenario
+Food providers such as college messes, hostel kitchens, restaurants, cafeterias and households may have surplus prepared food. Potential recipient organisations may need food but require reliable information about the food, quantity, timing and collection arrangements.
 
-**Scenario:** A college dining facility has prepared more food than its service demand. A community organisation may be able to accept some surplus, but the two parties need to coordinate food details, quantity, timing, transport and safe handling.
+The coordination problem includes identifying surplus while it is still within its usable period, recording accurate quantity and preparation details, sharing handling information for responsible review, finding a recipient with suitable preferences and capacity, confirming acceptance and coordinating pickup, and recording the actual handover separately from a suggested match.
 
-This is a design scenario, not an observed event.
+Mess2Meal provides a structured digital workflow for these coordination steps.
 
-| Stage | Information needed | Mess2Meal feature | Human decision |
-|---|---|---|---|
-| Surplus identified | Food item, quantity, source, time | Create listing | Donor confirms food is available |
-| Details recorded | Preparation time, use-by information, storage description | Validated listing fields | Donor supplies accurate information |
-| Initial review | Food condition and handling requirements | Review prompts | Responsible person checks food; software cannot certify safety |
-| Recipient search | Recipient category, capacity and availability | Matching shortlist | Coordinator verifies recipient suitability |
-| Acceptance | Quantity accepted and collection time | Acceptance status | Recipient confirms |
-| Pickup | Responsible collector and agreed time | Pickup status | Donor and recipient coordinate transport |
-| Handover | Actual quantity and timestamp | Delivered status | Both parties confirm handover |
-| Reporting | Confirmed quantity delivered | Impact dashboard | Administrator checks records |
+## 2. Users and responsibilities
 
-## 3. Requirements derived from published research
-
-FSSAI's 2019 surplus-food regulations state that unsafe food must not be distributed and that food must be handed over in time for consumption within its usable shelf life. The schedule addresses segregation, appropriate packing, hygienic storage and transport, and timely coordination.
-
-The resulting project requirements are:
-1. Store preparation and use-by information when available and verified.
-2. Store quantity and unit.
-3. Record reported storage and packaging conditions.
-4. Keep a coordinator review step before a match is treated as actionable.
-5. Record recipient acceptance separately from a system-generated match.
-6. Record pickup and delivery separately.
-7. Do not describe the application as a food-safety certification tool.
-
-IFSA's published material describes a national initiative connecting donors, recovery agencies and beneficiaries. The project should complement existing networks and verify local recipient organisations rather than inventing a directory.
-
-UNEP's Food Waste Index Report 2024 emphasises measurement across household, food-service and retail sectors. The CSV therefore retains source category, date, food category, quantity and provenance.
-
-## 4. Observation protocol
-
-This is a protocol, not a record that a visit occurred.
-
-- Select a mess, restaurant, cafeteria or household with permission to observe.
-- Observe for at least 20 minutes if required by the assignment.
-- Separate untouched surplus from plate waste and spoiled food.
-- Record the time and exact food item.
-- Record weight from a scale where possible; otherwise label it as an estimate and note who estimated it.
-- Ask how food is stored and who decides whether it can be shared.
-- Do not handle or distribute food unless authorised and appropriately trained.
-- Ask whether the donor currently has a collection arrangement.
-- Obtain permission before taking photos or recording identifiable details.
-
-## 5. Interview guide
-
-Suggested roles include a mess manager, cook, restaurant manager, NGO coordinator or community kitchen organiser. These are proposed questions; no answers are attributed to a real person.
-
-1. What happens to untouched surplus after meal service?
-2. How do you distinguish untouched surplus from plate returns?
-3. Who decides whether surplus can be donated?
-4. How do you measure quantity?
-5. How are preparation time, storage and use-by details tracked?
-6. Does an NGO or recovery organisation currently collect food?
-7. What collection timing and transport arrangements are needed?
-8. What is the biggest coordination problem in the current process?
-9. What information would make a digital listing useful?
-10. What would make you unwilling or unable to use such a system?
-
-## 6. Evidence register
-
-| Evidence item | Repository status | What it supports |
+| User | Main responsibility | System interaction |
 |---|---|---|
-| FSSAI 2019 regulations | Official source reviewed for this report | Regulatory design requirements |
-| IFSA official website | Official source reviewed for this report | Existing national initiative and stakeholder model |
-| UNEP Food Waste Index 2024 | Public report reviewed for this report | Measurement rationale and global context |
-| 24 rows in data/data.csv | Synthetic demonstration records | Dashboard and CSV testing only |
-| Physical site observation | Not documented / not verified | No local observation claim |
-| Interview with donor or recipient | Not documented / not verified | No stakeholder quote or local workflow claim |
-| Timestamped field photographs | Not present | SVG project artwork is not fieldwork evidence |
-| Confirmed donation handover | Not documented | No meals-delivered impact claim |
+| Food donor | Provide accurate listing and handling details | Create a surplus listing |
+| Recipient organisation | Confirm needs, capacity and acceptance | Register recipient details; review a proposed match |
+| Coordinator | Review listings, recipient suitability and timing | Inspect ranked suggestions and update status |
+| Volunteer / pickup partner | Coordinate and complete collection | Participate in the offline handover process |
+| Administrator | Maintain records and review outcomes | View listings and delivered-only impact totals |
 
-## 7. Local primary-evidence register
+The current prototype does not implement separate authenticated roles. These roles describe the intended operating model.
 
-No verifiable primary field evidence was supplied for this repository update. These values are therefore recorded as not recorded.
+## 3. End-to-end operating workflow
 
-| Required field | Record |
+| Step | Operational activity | Information recorded | Responsible party |
+|---|---|---|---|
+| 1. Identify surplus | Donor identifies food that may be available | Source, food name, category and quantity | Donor |
+| 2. Create listing | Donor enters listing details | Preparation time, best-before time, storage description and pickup location | Donor |
+| 3. Review details | Coordinator checks completeness and suitability | Review decision and missing information | Coordinator |
+| 4. Find recipients | System filters and ranks eligible recipients | Category preference, capacity, urgency and entered distance | System + coordinator |
+| 5. Confirm acceptance | Recipient agrees to accept the offered quantity | Acceptance and agreed quantity | Recipient |
+| 6. Arrange collection | Parties agree pickup time and responsibility | Pickup plan and contact coordination | Donor + recipient |
+| 7. Verify handover | Food is physically handed over | Actual handover time, quantity and confirmation | Parties involved |
+| 8. Close listing | Coordinator updates final status | Delivered / other final status | Coordinator |
+
+A match suggestion is not an acceptance. Acceptance is not a completed pickup. Only a verified handover should be counted as delivered.
+
+## 4. Information required for a useful listing
+
+| Field | Why it matters |
 |---|---|
-| Site name and area | Not recorded |
-| Visit date | Not recorded |
-| Start/end time | Not recorded |
-| Observation duration | Not recorded |
-| Person interviewed and role | Not recorded |
-| Interview date/time | Not recorded |
-| Three stakeholder statements | Not recorded |
-| Measured surplus quantity | Not recorded |
-| Photo 1 and timestamp | Not recorded |
-| Photo 2 and timestamp | Not recorded |
-| Permission for notes/photos | Not recorded |
+| Donor/source | Identifies where the food is offered |
+| Food name and category | Helps recipient assess suitability |
+| Quantity and unit | Allows capacity comparison |
+| Preparation date/time | Provides context for time-sensitive review |
+| Best-before / use-by information | Helps responsible people assess the remaining usable period |
+| Storage and packaging description | Provides handling context for review |
+| Pickup location | Allows the parties to plan collection |
+| Notes | Captures relevant constraints without exposing private data |
 
-## 8. Product decisions from this case study
+The donor must provide accurate information. A text description is not proof that food has been stored safely.
 
-A successful algorithmic match must not be treated as a donation. The lifecycle needs separate states for listing, review, match suggestion, recipient acceptance, pickup and confirmed delivery. This prevents the dashboard from counting uncollected food as impact.
+## 5. Recipient information
 
-The data model should preserve provenance and measurement method. A generated example row, staff estimate and scale measurement must never be indistinguishable.
+The prototype supports recipient records with organisation/group name, recipient type, contact person and phone field, location, preferred food categories, maximum capacity in kilograms, urgency level and active/inactive availability.
 
-## 9. Conclusion
+In a real deployment, recipient identity, authority to receive food, contact details and capacity would need to be verified. The current prototype does not independently verify organisations.
 
-The desk research and hypothetical workflow provide a grounded requirements basis for the Mess2Meal prototype. They support a system that records surplus details, helps coordinators shortlist recipients and tracks a handover. They do not establish that a local donor or recipient has been interviewed, that a visit occurred, or that food was donated.
+## 6. Matching logic and decision boundaries
 
-See research.md for the source list and official links.
+The Python matching module applies these filters:
+
+1. Listing status must be available.
+2. Best-before timestamp must be in the future.
+3. Storage description must be present and must not contain configured unsafe terms.
+4. Recipient must be active.
+5. Recipient capacity must be at least the listed quantity.
+6. Recipient category preferences must include the food category or the value All.
+
+Eligible recipients are ranked using urgency, coordinator-entered distance and capacity. The response includes a score and reasons.
+
+**Decision boundary:** the algorithm performs data-based filtering and prioritisation only. It cannot inspect food, validate temperature history, identify contamination, determine legal suitability or guarantee that a recipient can collect the food. A responsible human must make those decisions.
+
+## 7. Operational risks and controls
+
+| Risk | Potential consequence | Control / next improvement |
+|---|---|---|
+| Inaccurate preparation or expiry details | Incorrect time-based decision | Require donor confirmation and coordinator review |
+| Incomplete storage information | Unsafe assumption about handling | Hold incomplete listings for human review |
+| Recipient details are unverified | Failed or misdirected donation | Add verification and periodic re-confirmation |
+| Recipient capacity is outdated | Excess quantity offered | Confirm capacity before acceptance |
+| Pickup is delayed | Food may no longer be suitable | Add pickup windows and escalation process |
+| Match mistaken for delivery | Inflated impact reporting | Separate suggested, accepted, collected and delivered states |
+| Personal data exposure | Privacy risk | Restrict access and minimise stored contact details |
+| Synthetic data treated as evidence | Misleading project claims | Preserve provenance labels and disclose demo data |
+
+## 8. Validation status
+
+The repository includes a local prototype, a synthetic CSV dataset and matching tests. These demonstrate software behaviour, not live operational performance.
+
+| Validation area | Current status |
+|---|---|
+| Python application structure | Implemented in repository |
+| FastAPI food and recipient endpoints | Implemented in repository |
+| SQLite persistence | Implemented in repository |
+| Recipient filtering and ranking | Implemented in repository |
+| Streamlit dashboard | Implemented in repository |
+| Synthetic CSV dashboard view | Implemented in repository |
+| Unit tests | Test files present; execute before release |
+| Live donor onboarding | Not implemented / not verified |
+| Live NGO onboarding and verification | Not implemented / not verified |
+| Real pickup coordination | Manual / outside current prototype |
+| Confirmed real-world food handovers | Not documented |
+| Production security and deployment | Not implemented |
+
+## 9. Compliance and responsible use
+
+The workflow is informed by the Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019. The application is not a compliance tool and does not replace donor responsibilities, recipient procedures or applicable food-safety requirements.
+
+Before operational use, the organisation responsible for redistribution must establish appropriate processes for food eligibility, hygiene, packaging, temperature control, transport, traceability, recipient verification and incident handling.
+
+## 10. Scope conclusion
+
+The current Mess2Meal prototype demonstrates how surplus listings, recipient records, explainable matching and delivery status can be organised in one Python application. Its next engineering steps are role-based access, recipient verification, explicit acceptance and pickup states, audit history, notification support and a production-ready database.
+
+The current repository should be evaluated as a functional prototype rather than a live food distribution service.
