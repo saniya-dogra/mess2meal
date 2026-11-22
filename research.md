@@ -36,14 +36,30 @@ The prototype focuses on coordination and traceability. It does not make food sa
 
 **Required before submission:** Add the actual place, date, the person's role and the specific problem they described. If the person does not confirm this hypothesis, rewrite the five lines to reflect what they actually said.
 
-## 2.2 Two existing approaches and their local fit — validation pending
+## 2.2 Existing solutions and comparison
 
-| Existing approach | What it offers | Potential mismatch for the proposed small local workflow | What must be checked with the real person |
+This comparison is based on publicly available programme information reviewed on 22 November 2026. It describes what the organisations say they do; it does not establish whether a particular chapter or collection route is currently active near the project owner's chosen site.
+
+| Existing solution | Publicly described model | Strengths | What Mess2Meal should not assume / possible gap for a small outlet |
 |---|---|---|---|
-| Indian Food Sharing Alliance (IFSA) | A wider food-sharing initiative connecting donors, beneficiaries and recovery stakeholders; see the official IFSA sources in Section 3.2. | A national initiative may not by itself tell us whether a particular nearby outlet has an active, reachable collection partner at the exact time surplus is available. This is a local-coverage question, not a claim that IFSA is ineffective. | Has the person heard of IFSA? Have they used it or contacted a recovery organisation? Was a suitable local partner available? |
-| Direct phone calls / messaging between a donor and a known contact | A lightweight way to notify someone without learning a new application. | Details can remain in separate messages, and the donor may need to repeat quantity, timing, handling and collection updates. Whether this causes difficulty at the selected site is not yet known. | Does the person currently use calls or WhatsApp? Which details are difficult to track? Would a structured listing actually save time? |
+| **Indian Food Sharing Alliance (IFSA)** | FSSAI's IFSA initiative connects food businesses, food-sharing networks, food recovery agencies, NGOs, volunteers and beneficiaries. It provides donor and beneficiary registration pathways and a directory of food recovery agencies. | Established national coordination framework; donor registration asks about business details, food categories, logistics and quality-check facilities; agency directory indicates different organisation capabilities. | The public directory is not proof that a listed agency can collect from a particular outlet at a particular time. Donor registration and a network directory do not themselves provide a live listing-level workflow for this prototype's chosen location. Verify current local coverage and contact process before claiming a gap. |
+| **Robin Hood Army (RHA)** | A volunteer-led, zero-funds organisation that collects surplus food from restaurants and communities and distributes it to people in need. Its public description says local chapters are run by volunteers; its FAQ describes volunteers serving groups such as homeless families, orphanages, public-hospital patients and old-age homes. | A practical community redistribution model that relies on local volunteers and relationships with food donors. | The public information does not establish real-time availability, capacity or pickup status for every local chapter. Do not claim that RHA is absent or ineffective in the project area without contacting a relevant chapter. |
+| **Direct calls / messaging between a donor and a known contact** | Informal one-to-one coordination by phone or messaging. | Familiar, low setup cost and can work well when the donor and recipient already know each other. | Listing details, updates and handover confirmation may be spread across messages. Whether this creates a real problem at the selected site must be established through interview, not assumed. |
 
-**Local-fit conclusion:** No real person has yet been interviewed in the repository evidence. Therefore, neither mismatch above is confirmed for the user's chosen person. Record the person's answers in `fieldwork.md` and revise this comparison before submission.
+### What Mess2Meal can contribute
+
+Mess2Meal is not a replacement for IFSA or RHA. Its potential contribution is a small, transparent record for one local workflow: capture a listing, show recipient eligibility reasons, record coordinator-entered distance, and preserve status history through handover. This is useful only if a real donor/coordinator confirms that the workflow solves a problem they actually experience.
+
+### Local validation questions
+
+Before claiming that an existing solution does not fit the selected person, ask:
+1. Which organisation or person do you contact today when surplus food is available?
+2. Have you tried IFSA, Robin Hood Army or another food recovery organisation?
+3. How long does it usually take to find a recipient and arrange collection?
+4. What information is repeatedly missing or needs to be shared again?
+5. Would a simple listing and status record improve the process, or is the current method already sufficient?
+
+**Evidence boundary:** The comparison above is secondary research. It is not an interview result, local service audit or proof that an organisation is unavailable in Srinagar or any other locality.
 
 
 ## 3. Evidence from published sources
@@ -119,6 +135,45 @@ These are global estimates, not measurements of a particular Indian college, cit
 - The report measures food waste across household, food-service and retail sectors and highlights the need for comparable measurement.
 - Its global estimates provide context, but they do not measure food waste at the selected college, shop or neighbourhood.
 - For Mess2Meal, every local quantity needs its own date, source and measurement method, and synthetic examples must not be presented as impact.
+
+## 3.4 Focused source notes from public research
+
+**Source A — FSSAI, Food Safety and Standards (Recovery and Distribution of Surplus Food) Regulations, 2019**
+
+Official links:
+- Regulation PDF: https://www.fssai.gov.in/upload/uploadfiles/files/Gazette_Notification_Surplus_Food_06_08_2019.pdf
+- FSSAI regulations index: https://fssai.gov.in/food-law/regulations
+
+Research notes:
+1. The regulation permits food business operators with surplus food to donate it to a surplus-food distribution organisation in accordance with the regulation.
+2. Donors must not distribute unsafe food. Food must be handed over with enough time for recipients to consume it within its shelf life.
+3. Schedule I addresses segregation, suitable packing, hygienic storage, advance notice, clean covered containers and appropriate transport conditions.
+
+**Design decision:** Mess2Meal records preparation/best-before information and reported storage conditions, and it treats matching as a coordination aid only. The software cannot inspect food, certify safety or establish legal compliance.
+
+**Source B — FSSAI / Indian Food Sharing Alliance (IFSA), “What is IFSA?” and donor registration**
+
+Official links:
+- IFSA overview: https://sharefood.eatrightindia.gov.in/what_ifsa.html
+- Donor registration fields: https://sharefood.eatrightindia.gov.in/donor-register.html
+- Agency directory: https://sharefood.eatrightindia.gov.in/agency-list.html
+
+Research notes:
+1. IFSA describes itself as an FSSAI initiative intended to connect food-sharing organisations, food recovery agencies, NGOs and food businesses.
+2. Its donor registration asks for business identity and contact information, FSSAI registration, business type, food categories, whether surplus food is available, and whether logistics and quality-check facilities are available.
+3. The public agency directory lists organisations and their stated recovery/distribution capabilities. A directory entry does not prove that a specific organisation is currently available for a specific pickup.
+
+**Design decision:** A future production version should verify organisations and their current coverage/capacity. Mess2Meal's sample recipient records must remain labelled as demo records until a real organisation has consented to be listed.
+
+**Additional comparator — Robin Hood Army (RHA)**
+
+Official links:
+- About: https://robinhoodarmy.in/
+- FAQ: https://robinhoodarmy.in/faqs
+
+RHA publicly describes a volunteer-based, zero-funds model that collects surplus food from restaurants and communities and distributes it to people in need. Its local-chapter model is relevant as an existing community-led alternative. Its public pages do not prove current availability in the project owner's exact locality; local contact and confirmation would be required before drawing that conclusion.
+
+**Research method and limitation:** These notes were prepared from the linked public webpages and regulation text, accessed 22 November 2026. They are secondary research summaries. The project owner should open and read the original sources and add any personal observations required by the assignment. They do not substitute for primary fieldwork.
 
 ## 4. Existing approach and project positioning
 
