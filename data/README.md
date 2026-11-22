@@ -1,13 +1,21 @@
-# Local data collection
+# Data files — read before using
 
-The assignment requires **at least 20 real entries collected by the project author**. The CSV currently contains only its header row; it is not a completed field dataset.
+This project deliberately keeps real field evidence separate from software demo records.
 
-## How to collect
-1. Visit the actual mess/cafeteria/community location.
-2. Ask permission before recording observations or taking photos.
-3. Record the date, time, place, food item, measured/estimated quantity, preparation and best-before times, storage condition and how you obtained each value.
-4. Use `not recorded` for information you genuinely could not collect. Never fill missing facts with guesses.
-5. Do not include sensitive personal information or a person's phone number in public data.
-6. Collect 20 or more distinct real observations and explain the method in `fieldwork.md`.
+## `data.csv` — real field observations
 
-Keep raw observations separate from software demo examples. Do not claim generated sample rows are fieldwork.
+- This is the file for your own 20+ observations collected at the actual mess, restaurant, cafe, household or community location.
+- Record the actual date, time, location, food, quantity and storage details you observed.
+- Add the collection method and limitations in `fieldwork.md`.
+- Never invent missing measurements. Use `not recorded` when a value genuinely was not collected.
+- Obtain permission before photos or personal information are recorded.
+
+## `demo_data.csv` — synthetic test data
+
+- Contains 24 illustrative rows across college messes, hostel messes, restaurants, cafes/canteens and household food.
+- Locations and recipient names are fictional examples.
+- Quantities and timestamps are invented to help test the dashboard and charts.
+- Every row is marked `SYNTHETIC_DEMO_ONLY`.
+- **Do not count these rows toward the assignment's 20 real entries. Do not describe them as fieldwork.**
+
+The dashboard lets you switch between the real-observation file and the demo file so the two datasets do not get mixed.
