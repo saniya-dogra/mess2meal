@@ -1,8 +1,8 @@
-from datetime import datetime, timezone
+from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, model_validator
 
 
 class FoodStatus(str, Enum):
@@ -24,13 +24,13 @@ class FoodCreate(BaseModel):
     pickup_location: str = Field(min_length=3, max_length=200)
     notes: Optional[str] = Field(default="", max_length=500)
 
-    @field_validator("best_before")
-    @classmethod
-    def expiry_after_preparation(cls, value, info):
-        prepared = info.data.get("prepared_at")
-        if prepared and value <= prepared:
+    @model_validator(mode="after")
+    def validate_times(self):
+        if self.prepared_at.tzinfo is None or self.best_before.tzinfo is None:
+            raise ValueError("prepared_at and best_before must include a timezone")
+        if self.best_before <= self.prepared_at:
             raise ValueError("best_before must be later than prepared_at")
-        return value
+        return self
 
 
 class RecipientCreate(BaseModel):
@@ -42,11 +42,13 @@ class RecipientCreate(BaseModel):
     preferred_categories: list[str] = Field(default_factory=list)
     capacity_kg: float = Field(gt=0, le=10000)
     urgency: int = Field(default=3, ge=1, le=5)
+    distance_km: float = Field(default=0, ge=0, le=10000)
     is_active: bool = True
 
 
 class StatusUpdate(BaseModel):
     status: FoodStatus
+    note: str = Field(default="", max_length=300)
 
 
 class MatchResult(BaseModel):
