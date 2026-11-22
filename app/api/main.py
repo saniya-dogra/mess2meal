@@ -1,14 +1,15 @@
 from fastapi import FastAPI, HTTPException
-from .database import initialize_database, get_connection
-from .schemas import FoodCreate, RecipientCreate, StatusUpdate
+
+from .database import get_connection, initialize_database
 from .matching import rank_recipients
+from .schemas import FoodCreate, RecipientCreate, StatusUpdate
 from . import services
-import json
+
 
 app = FastAPI(
     title="Mess2Meal API",
-    description="A local-first food rescue and redistribution prototype.",
-    version="1.0.0",
+    description="A local-first food rescue and redistribution coordination prototype.",
+    version="1.1.0",
 )
 
 
@@ -19,7 +20,7 @@ def startup():
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "Mess2Meal API"}
+    return {"status": "ok", "service": "Mess2Meal API", "version": app.version}
 
 
 @app.post("/food", status_code=201)
@@ -46,22 +47,28 @@ def get_recipients():
 def get_matches(food_id: int):
     with get_connection() as conn:
         row = conn.execute("SELECT * FROM food WHERE id=?", (food_id,)).fetchone()
-    if not row:
+    if row is None:
         raise HTTPException(status_code=404, detail="Food listing not found")
-    food = dict(row)
-    recipients = services.list_recipients()
-    # Distance is intentionally supplied by an operator, not obtained from an API.
-    for recipient in recipients:
-        recipient["distance_km"] = 0
-    return {"food_id": food_id, "matches": rank_recipients(food, recipients)}
+    return {"food_id": food_id, "matches": rank_recipients(dict(row), services.list_recipients())}
 
 
 @app.patch("/food/{food_id}/status")
 def change_status(food_id: int, payload: StatusUpdate):
-    updated = services.update_food_status(food_id, payload.status.value)
-    if not updated:
+    try:
+        updated = services.update_food_status(food_id, payload.status.value, payload.note)
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    if updated is None:
         raise HTTPException(status_code=404, detail="Food listing not found")
     return updated
+
+
+@app.get("/food/{food_id}/history")
+def get_food_history(food_id: int):
+    history = services.get_status_history(food_id)
+    if history is None:
+        raise HTTPException(status_code=404, detail="Food listing not found")
+    return {"food_id": food_id, "history": history}
 
 
 @app.get("/impact")
