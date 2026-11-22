@@ -39,6 +39,12 @@ Locations, quantities, recipients and timestamps are illustrative. They are not 
 8. Keep synthetic and genuinely collected records distinguishable.
 9. Do not publish personal phone numbers, private addresses or identifiable details without permission.
 
+## Collect genuine fieldwork separately
+
+Use [fieldwork-template.csv](fieldwork-template.csv) as a blank 20-row template after completing the real visit. The blank rows are not data and do not count toward the assignment's 20 entries. For each real record, enter the actual date/time, place label, item, quantity, unit, measurement method and uncertainty. Mark only genuinely collected rows as `FIELD_OBSERVED`.
+
+Keep the existing `data.csv` synthetic rows unchanged and clearly labelled until the real dataset is collected and reviewed. Do not combine synthetic examples with primary observations without an explicit provenance column and clear explanation.
+
 ## Inspect the CSV
 
 ```bash
