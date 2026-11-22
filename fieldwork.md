@@ -1,33 +1,75 @@
 # Mess2Meal — fieldwork record and operational validation
 
-> **Evidence status: NOT YET RECORDED.** This is a structured record. No visit, interview, photograph, partnership or handover is claimed until the project owner adds genuine observations.
+> **Evidence status: NOT YET RECORDED.** This file is a ready-to-use fieldwork workbook. It does not claim a visit, interview, photo, partnership or handover has happened. Fill it only with information you personally collect.
 
-## 1. Visit details — complete after the real visit
+## 1. Before going — choose one real person and one place
+
+Choose a place within walking distance of your home or college where you have noticed a possible food-surplus problem in the last seven days. Ask permission before observing or taking photos.
 
 | Item | Record |
 |---|---|
-| Place visited | NOT RECORDED |
+| Place / outlet name | NOT RECORDED |
 | Place type | NOT RECORDED |
-| City / area | NOT RECORDED |
-| Visit date | NOT RECORDED |
+| Area / city | NOT RECORDED |
+| Person you plan to speak with (or anonymous label) | NOT RECORDED |
+| Their role | NOT RECORDED |
+| Why this person is affected by the problem | NOT RECORDED |
+| Date of visit | NOT RECORDED |
+| Planned observation start/end | NOT RECORDED |
+
+**Do not use a made-up place or person.** If the original surplus-food hypothesis does not match what you see, change the project problem before submission.
+
+## 2. Required 20-minute observation
+
+Record the actual start and end time. Observe the process without interrupting normal work. Ask before weighing, counting, photographing or handling anything.
+
+| Item | Record |
+|---|---|
+| Actual date | NOT RECORDED |
 | Start time | NOT RECORDED |
 | End time | NOT RECORDED |
-| Observation duration | NOT RECORDED |
-| Permission for photographs | NOT RECORDED |
+| Total duration | NOT RECORDED |
+| Permission to observe | NOT RECORDED |
+| Permission to take photos | NOT RECORDED |
 
-Do not invent a location, date, time, duration or permission status.
+### Observation log
 
-## 2. Observation notes
+Use one row per distinct observation or measurement. For the assignment's 20 entries, enter 20 real observations/data records in the CSV template. Do not create 20 rows by splitting or duplicating one observation.
 
-Record what was directly seen and separate observation from interpretation.
+| # | Time | What you directly saw | Food / item | Quantity | Unit | How measured (weighed / counted / estimated) | Uncertainty / notes |
+|---:|---|---|---|---:|---|---|---|
+| 1 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 2 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 3 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 4 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 5 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 6 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 7 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 8 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 9 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 10 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 11 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 12 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 13 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 14 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 15 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 16 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 17 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 18 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 19 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
+| 20 | NOT RECORDED | NOT RECORDED | NOT RECORDED |  |  | NOT RECORDED | NOT RECORDED |
 
-| Time | Direct observation | Approximate count / quantity | Measurement method | Uncertainty / notes |
-|---|---|---|---|---|
-| NOT RECORDED | Awaiting genuine observation | NOT RECORDED | NOT RECORDED | Complete during visit |
+Keep these categories separate:
+- untouched surplus that may still be usable;
+- food already served or plate waste;
+- spoiled / discarded food;
+- food retained for later use.
 
-Add further rows only from real observation. If an exact time, count or quantity is unavailable, write not recorded.
+Do not treat a visual estimate as a measured weight. If no quantity is available, write "not recorded".
 
-## 3. Interview record — complete only with consent
+## 3. Conversation with the real person
+
+Ask permission to take notes. Explain that this is a student project and that you will not publish private phone numbers or sensitive details. You may use an anonymous label if the person does not want their name published.
 
 | Item | Record |
 |---|---|
@@ -35,29 +77,77 @@ Add further rows only from real observation. If an exact time, count or quantity
 | Role | NOT RECORDED |
 | Date and time | NOT RECORDED |
 | Consent to record notes | NOT RECORDED |
+| Consent to quote them in the project | NOT RECORDED |
+
+### Suggested questions (write down their actual answers)
+
+1. What happens when extra food is left over?
+2. How do you currently decide how much food to prepare or retain?
+3. What is the hardest part of handling surplus or finding someone to collect it?
+4. How do you currently contact a possible recipient?
+5. What information would you need before agreeing to give food away?
+6. What would make a tool like Mess2Meal useful or not useful?
 
 ### Three things the person actually said
 
-1. NOT RECORDED
-2. NOT RECORDED
-3. NOT RECORDED
+Write accurate notes or short exact quotations. Do not use these prompts as if they were answers.
 
-### One surprising observation or statement
+1. **Statement 1:** NOT RECORDED
+2. **Statement 2:** NOT RECORDED
+3. **Statement 3:** NOT RECORDED
 
-NOT RECORDED
+### One thing that surprised you
 
-Use accurate notes or short quotations. Do not create dialogue or attribute statements to a person who was not interviewed.
+**Surprising statement / observation:** NOT RECORDED
 
-## 4. Photographic evidence
+**Why it surprised you:** NOT RECORDED
 
-| Photo | File path | Capture timestamp | What it shows | Permission |
+**How it changes the project or your original assumption:** NOT RECORDED
+
+## 4. Two timestamped photographs
+
+Take two original photos during the visit, with permission. Avoid faces, phone numbers, private documents and identifiable people unless explicit permission is given. Keep original image files and their metadata; do not create timestamps in an image editor.
+
+| Photo | Repository file path (after adding) | Original capture date/time | What it shows | Permission confirmed? |
 |---|---|---|---|---|
 | 1 | NOT RECORDED | NOT RECORDED | NOT RECORDED | NOT RECORDED |
 | 2 | NOT RECORDED | NOT RECORDED | NOT RECORDED | NOT RECORDED |
 
-Only add original photographs from the actual visit, with permission. Illustrations are not fieldwork evidence.
+Suggested photo subjects, only if they are relevant and permitted:
+- Photo 1: the food preparation / surplus handling area, without identifiable people.
+- Photo 2: the storage / collection point or a non-identifying view of the process.
 
-## 5. Operational workflow
+**Do not use generated images, SVG illustrations, screenshots or stock photos as fieldwork photos.**
+
+## 5. Raw data file
+
+Use [data/fieldwork-template.csv](data/fieldwork-template.csv) for the 20 genuine entries. Keep the existing `data/data.csv` labelled as synthetic demonstration data until you have collected real observations and deliberately reviewed the new dataset.
+
+For every entry, record:
+- date and time observed;
+- actual place label (avoid publishing private addresses);
+- source type and food/item;
+- quantity and unit;
+- measurement method (weighed, counted or estimated);
+- preparation / best-before details only when actually known;
+- storage description as reported or observed, not as a safety certification;
+- notes and uncertainty;
+- `data_origin` as `FIELD_OBSERVED` only for genuinely collected records.
+
+Never invent missing times, quantities, quotes or names. Do not publish private contact details.
+
+## 6. How the findings should change the tool
+
+After the visit, answer in your own words:
+- What exact task does the person need help with?
+- Which fields in the current form are unnecessary?
+- Which important field is missing?
+- What should the tool never decide automatically?
+- What one output would save this person time?
+
+Update the five-line problem statement in `research.md` to match the observed problem. If the evidence does not support food redistribution, narrow or change the tool.
+
+## 7. Operational workflow (proposed, not field-validated)
 
 1. Donor identifies possible surplus.
 2. Donor records source, food, quantity, preparation time, best-before information, storage description and pickup location.
@@ -70,11 +160,13 @@ Only add original photographs from the actual visit, with permission. Illustrati
 
 A match suggestion is not acceptance. Acceptance is not collection. Only a verified handover should be counted as delivered.
 
-## 6. Before submission
+## 8. Submission evidence checklist
 
-- [ ] Complete a real visit for the required duration.
-- [ ] Add at least two timestamped photographs with permission.
-- [ ] Record a genuine conversation and the person's role.
-- [ ] Add three accurate statements and one surprising observation.
-- [ ] Add at least 20 genuine data entries, keeping estimates and unknowns explicit.
-- [ ] Keep supporting evidence and permissions appropriately private.
+- [ ] One real problem personally observed within walking distance in the last seven days.
+- [ ] One real person affected by that problem, with their role recorded.
+- [ ] At least 20 minutes at the place, with actual date and start/end times.
+- [ ] Two original timestamped photos with permission.
+- [ ] One genuine conversation, three accurate things said and one surprising thing.
+- [ ] At least 20 real data entries in the fieldwork CSV, with collection method.
+- [ ] Five-line problem statement and solution comparison updated from field evidence.
+- [ ] No invented people, quotes, timestamps, photos, quantities or impact claims.
