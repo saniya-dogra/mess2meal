@@ -69,7 +69,7 @@ flowchart LR
     API --> M["Matching & Eligibility Rules"]
     M --> DB[("SQLite Database")]
     UI --> CSV["Pandas CSV Viewer"]
-    CSV --> D[("Field data / Demo data")]
+    CSV --> D[("data.csv")]
     API --> IMP["Donation & Impact Tracking"]
     IMP --> DB
 ```
