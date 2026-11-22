@@ -18,6 +18,12 @@
 
 ## 🌱 The problem we're solving
 
+<div align="center">
+
+![Mess2Meal food rescue illustration](assets/food-rescue-hero.svg)
+
+</div>
+
 A college mess may prepare more food than students consume. A restaurant may have safe surplus near closing time. A household may have extra freshly prepared food. Meanwhile, local NGOs, shelters and community groups may need meals.
 
 **Mess2Meal is a Python-based coordination tool** that helps record surplus food, identify potentially suitable recipients and track the donation journey.
@@ -39,6 +45,8 @@ A college mess may prepare more food than students consume. A restaurant may hav
 
 ## 🎬 How it works
 
+![Donation lifecycle infographic](assets/donation-lifecycle.svg)
+
 ```mermaid
 flowchart TD
     A(["🍲 Surplus food available"]) --> B["Mess / restaurant / household creates listing"]
@@ -59,6 +67,11 @@ flowchart TD
 ```
 
 ## 🏛️ System architecture
+
+![Dashboard concept illustration](assets/dashboard-concept.svg)
+
+<sub>Illustrative design concept — not a screenshot of the running application.</sub>
+
 
 ```mermaid
 flowchart LR
@@ -125,10 +138,10 @@ mess2meal/
 │   ├── architecture.md
 │   └── flowcharts/
 │       └── donation-lifecycle.mmd
-├── assets/                     # App screenshots & permitted photos
+├── assets/\n│   ├── food-rescue-hero.svg\n│   ├── donation-lifecycle.svg\n│   ├── dashboard-concept.svg\n│   └── README.md
 ├── tests/
 │   └── test_matching.py
-├── ai-chats/                   # Actual AI chat exports
+├── ai-chats/\n│   ├── project-development-log.md\n│   └── README.md
 ├── research.md
 ├── fieldwork.md
 ├── reflection.md
@@ -219,7 +232,7 @@ Add two timestamped photos from your real field visit only with permission. Do n
 - [Fieldwork record](fieldwork.md) — real visit, named/agreed contact, timestamped conversation and photos.
 - [Data collection guide](data/README.md) — collect 20+ genuine observations.
 - [Personal reflection](reflection.md) — write this yourself without AI.
-- [AI chat exports](ai-chats/) — add the actual conversations used.
+- [AI-assisted development log](ai-chats/project-development-log.md) — summary of the work recorded in this conversation. Export and add raw chats separately if required.
 
 ## ⚠️ Current limitations
 
