@@ -155,7 +155,7 @@ Research notes:
 
 Official links:
 - IFSA overview: https://sharefood.eatrightindia.gov.in/what_ifsa.html
-- Donor registration fields: https://sharefood.eatrightindia.gov.in/donor-register.html
+- Donor registration fields: https://sharefood.eatrightindia.gov.in/donor.html
 - Agency directory: https://sharefood.eatrightindia.gov.in/agency-list.html
 
 Research notes:
@@ -253,3 +253,7 @@ The strongest next research step for local deployment is to verify one donor wor
 5. FSSAI / IFSA. Beneficiary information. https://sharefood.eatrightindia.gov.in/beneficiary.html
 6. UNEP. Food Waste Index Report 2024. March 2024. https://wedocs.unep.org/items/dbe2cd4c-8384-4636-8359-5847f42b9711
 7. UNEP. Food Waste Index Report 2024 — Key Messages. https://wedocs.unep.org/bitstream/handle/20.500.11822/45275/Food-Waste-Index-2024-key-messages.pdf?sequence=8
+11. FSSAI / IFSA. Food Donating Agencies — state-wise agency directory. https://sharefood.eatrightindia.gov.in/agency-list.html
+12. FSSAI / IFSA. Food Business — recovery agency guidance for collection from caterers. https://sharefood.eatrightindia.gov.in/regulation-food-business.html
+13. Robin Hood Army. About the organisation and its surplus-food collection model. https://www.robinhoodarmy.com/sites/main/about
+14. Robin Hood Army. Frequently Asked Questions. https://robinhoodarmy.in/faqs
