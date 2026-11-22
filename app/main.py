@@ -38,8 +38,8 @@ with food_tab:
         notes = st.text_area("Additional notes")
         submitted = st.form_submit_button("Publish food listing", type="primary")
     if submitted:
-        prepared = datetime.combine(prepared_date, prepared_time)
-        best_before = datetime.combine(expiry_date, expiry_time)
+        prepared = datetime.combine(prepared_date, prepared_time).astimezone()
+        best_before = datetime.combine(expiry_date, expiry_time).astimezone()
         payload = {
             "food_name": food_name, "category": category, "quantity_kg": quantity,
             "prepared_at": prepared.isoformat(), "best_before": best_before.isoformat(),
