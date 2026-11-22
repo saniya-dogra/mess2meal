@@ -1,0 +1,13 @@
+flowchart TD
+    A[Surplus food identified] --> B[Create listing]
+    B --> C{Expiry and storage checks}
+    C -->|Fail| D[Reject / do not redistribute]
+    C -->|Pass| E[Find active recipients]
+    E --> F[Filter category and capacity]
+    F --> G[Rank eligible recipients]
+    G --> H{Recipient accepts?}
+    H -->|No| E
+    H -->|Yes| I[Arrange pickup]
+    I --> J[Human handover check]
+    J --> K[Mark delivered]
+    K --> L[Update impact summary]
